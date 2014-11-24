@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OrganizationsModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="OrganizationsEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Clients" EntityType="OrganizationsModel.Clients" />
+    <EntitySet Name="Employees" EntityType="OrganizationsModel.Employees" />
+    <EntitySet Name="Contact_Name" EntityType="OrganizationsModel.Contact_Name" />
+    <EntitySet Name="Content" EntityType="OrganizationsModel.Content" />
+    <EntitySet Name="Content_Type" EntityType="OrganizationsModel.Content_Type" />
+    <EntitySet Name="Employee_To_Content" EntityType="OrganizationsModel.Employee_To_Content" />
+    <EntitySet Name="Employee_Clients_Content" EntityType="OrganizationsModel.Employee_Clients_Content" />
+  </EntityContainer>
+  <EntityType Name="Clients">
+    <Key>
+      <PropertyRef Name="ID_Client" />
+    </Key>
+    <Property Name="ID_Client" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Registration_Date" Type="DateTime" Precision="0" />
+    <Property Name="ID_Employee" Type="Int32" />
+    <Property Name="Address" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Post_Address" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="UNN_UNP" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Kind_Activity" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Rating" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Employees">
+    <Key>
+      <PropertyRef Name="ID_Employee" />
+    </Key>
+    <Property Name="ID_Employee" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Login" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Role" Type="Int32" Nullable="false" />
+    <Property Name="FIO" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Post" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Registration_Date" Type="DateTime" Precision="0" />
+    <Property Name="Date_Entry" Type="DateTime" Precision="3" />
+    <Property Name="Date_Birth" Type="DateTime" Precision="3" />
+    <Property Name="Date_Admission" Type="DateTime" Precision="3" />
+    <Property Name="Address" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Contact_Name">
+    <Key>
+      <PropertyRef Name="ID_Contact_Name" />
+    </Key>
+    <Property Type="Int32" Name="ID_Contact_Name" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="FIO" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Post" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Telephone" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Time" Name="Dinner_Time" Precision="7" />
+    <Property Type="Int32" Name="ID_Clients" Nullable="false" />
+    <Property Type="Int32" Name="Type" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Content">
+    <Key>
+      <PropertyRef Name="ID_Content" />
+    </Key>
+    <Property Type="Int32" Name="ID_Content" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Text" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ID_Content_Type" Nullable="false" />
+    <Property Type="DateTime" Name="Create_Date" Precision="3" />
+    <Property Type="Int32" Name="IsRead" />
+    <Property Type="Int32" Name="Important" />
+  </EntityType>
+  <EntityType Name="Content_Type">
+    <Key>
+      <PropertyRef Name="ID_Content_Type" />
+    </Key>
+    <Property Type="Int32" Name="ID_Content_Type" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Type" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Employee_To_Content">
+    <Key>
+      <PropertyRef Name="ID_Content" />
+      <PropertyRef Name="ID_Author_Employee" />
+      <PropertyRef Name="ID_Addressee_Employee" />
+    </Key>
+    <Property Type="Int32" Name="ID_Content" Nullable="false" />
+    <Property Type="Int32" Name="ID_Author_Employee" Nullable="false" />
+    <Property Type="Int32" Name="ID_Addressee_Employee" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Employee_Clients_Content">
+    <Key>
+      <PropertyRef Name="ID_Content" />
+      <PropertyRef Name="ID_Author_Employee" />
+      <PropertyRef Name="ID_Addressee_Client" />
+    </Key>
+    <Property Type="Int32" Name="ID_Content" Nullable="false" />
+    <Property Type="Int32" Name="ID_Author_Employee" Nullable="false" />
+    <Property Type="Int32" Name="ID_Addressee_Client" Nullable="false" />
+  </EntityType>
+</Schema>

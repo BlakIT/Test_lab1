@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UsersModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="UsersEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Users" EntityType="UsersModel.Users" />
+  </EntityContainer>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="User_ID" />
+    </Key>
+    <Property Name="User_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Login" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Pass" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="DB_Path" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Mail" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Type="String" Name="ConfPass" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,14 @@
+﻿@model List<CRM.Employees>
+
+
+
+        @foreach (CRM.Employees emp in Model)
+        {
+        <div class="row" style="margin-left:50px;">
+            <div class="col-sm-8" style="padding-left: 0; padding-right: 0;">
+                <input type="radio" name="radioEmpl"  value="@emp.ID_Employee" id="@emp.FIO"> @emp.FIO
+            </div>
+        </div>
+        }
+       
+    

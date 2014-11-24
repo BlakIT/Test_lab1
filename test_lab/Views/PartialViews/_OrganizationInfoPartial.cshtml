@@ -1,0 +1,258 @@
+﻿@model CRM.Models.ClientsInfoForEdit
+
+<script type="text/javascript">
+
+    var index = 2;
+
+    function addNewFields() {
+
+        var txt = "<div id=\"divF" + index + "\" style=\"display:none;\"><br /><br /> <div class=\"form-group\">" +
+                    "<label class=\"control-label col-sm-2\">Имя сотрудника:</label> " +
+                    "<div class=\"col-sm-4\">" +
+                    "<input type=\"text\" class=\"form-control\" id=\"addName" + index + "\" name=\"addName" + index + "\" />" +
+                  "</div>" +
+
+                 "<label class=\"control-label col-sm-2\">Телефон:</label>" +
+                     "<div class=\"col-sm-4\">" +
+                        "<input type=\"text\" class=\"form-control\" id=\"addTel" + index + "\" name=\"addTel" + index + "\" />" +
+                    "</div>" +
+                     "</div>" +
+
+             "<div class=\"form-group\">" +
+                "<label class=\"control-label col-sm-2\">Время обеда:</label>" +
+                "<div class=\"col-sm-4\">" +
+                    "<input type=\"text\" class=\"form-control timePick\" id=\"addDinner" + index + "\" name=\"addDinner" + index + "\" />" +
+                "</div>" +
+
+                "<label class=\"control-label col-sm-2\">Должность:</label>" +
+                "<div class=\"col-sm-4\">" +
+                    "<input type=\"text\" class=\"form-control\" id=\"addPost" + index + "\" name=\"addPost" + index + "\" />" +
+                "</div>" +
+            "</div>" +
+
+            "<input type=\"button\" value=\"+\" onclick=\"addNewFields(); return false;\"/> </div>";
+
+        $("#buttonsDiv").before(txt);
+
+        var id = "divF" + index;
+
+        $("#" + id).show("slow");
+
+        index++;
+
+        $('[class*=timePick]').timepicker({
+            minuteStep: 10,
+            showMeridian: false,
+            defaultTime: false
+        });
+    }
+
+    function ClickPopUp5() {
+        $('.popup-link-5').trigger('click');
+    }
+
+    function deleteCN(e) {
+        var cnNum = $(e).attr('id').substr(6);
+
+        $('#name' + cnNum).val("");
+        $('#dinner' + cnNum).val("");
+        $('#tel' + cnNum).val("");
+        $('#post' + cnNum).val("");
+
+
+
+        $('#name' + cnNum).attr("disabled", true);
+        $('#dinner' + cnNum).attr("disabled", true);
+        $('#tel' + cnNum).attr("disabled", true);
+        $('#post' + cnNum).attr("disabled", true);
+
+        $('#name' + cnNum).css("background-color", "#e2e2e2");
+        $('#dinner' + cnNum).css("background-color", "#e2e2e2");
+        $('#tel' + cnNum).css("background-color", "#e2e2e2");
+        $('#post' + cnNum).css("background-color", "#e2e2e2");
+    }
+</script>
+
+
+
+@if (Model.employee != null)
+{
+    <div class="form-group" style="height: 10px;">
+        <label class="control-label col-sm-3">Внесена :</label>
+        <div class="col-sm-3">
+            <a class="popup-link-5" href='javascript:ClickPopUp5();' id="popup-link-5">@Model.employee.FIO</a>
+        </div>
+    </div>
+    <br />
+    <hr style="margin: 0; background-color: black !important; height: 1px; width: 300px;" />
+    <br />
+}
+
+@using (Html.BeginForm("EditClient", "Admin", FormMethod.Post, new { @class = "form-horizontal", role = "form", id = "EditClientForm" }))
+{
+    <div style="display: none;">
+        @Html.EditorFor(model => model.client.ID_Client)
+        @Html.EditorFor(model => model.client.ID_Employee)
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-2">Название:</label>
+        <div class="col-sm-3">
+            @Html.EditorFor(model => model.client.Title, new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+
+        <label class="control-label col-sm-4">Дата регистрации:</label>
+        <div class="col-sm-3">
+            @Html.EditorFor(model => model.client.Registration_Date, new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-2">Адрес:</label>
+        <div class="col-sm-3">
+            @Html.EditorFor(model => model.client.Address, new { @class = "form-control" })
+        </div>
+
+        <label class="control-label col-sm-4">Почтовый адрес:</label>
+        <div class="col-sm-3">
+            @Html.EditorFor(model => model.client.Post_Address, new { @class = "form-control", style = "width:150px;" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-2">УНН\УНП:</label>
+        <div class="col-sm-3">
+            @Html.EditorFor(model => model.client.UNN_UNP, new { @class = "form-control" })
+        </div>
+
+        <label class="control-label col-sm-4">Вид деятельности:</label>
+        <div class="col-sm-3">
+            @Html.EditorFor(model => model.client.Kind_Activity, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <hr style="margin: 0; background-color: black !important; height: 1px;" />
+    <br />
+
+    if (Model.contacts.Count != 0)
+    {
+        int i = 1;
+
+        foreach (CRM.Contact_Name cn in Model.contacts)
+        {
+            
+    <div style="display: none;">
+        @Html.TextBox("cnid" + i, cn.ID_Contact_Name)
+    </div>
+                
+    <div class="form-group">
+        <div class="col-sm-1">
+            <input type="button" class="form-control" id="delCN_@i.ToString()"  value="-" style="width: 26px;" onclick="deleteCN(this); return false;" />
+        </div>
+        <label class="control-label col-sm-3">Контактное лицо:</label>
+        <div class="col-sm-3">
+            @Html.TextBox("name" + i, cn.FIO)
+        </div>
+
+        <label class="control-label col-sm-2">Телефон:</label>
+        <div class="col-sm-3" style="padding-top: 8px;">
+            @Html.TextBox("tel" + i, cn.Telephone)
+        </div>
+        
+    </div>
+            
+    <div class="form-group">
+        <label class="control-label col-sm-3">Время обеда:</label>
+        <div class="col-sm-4" style="padding-top: 8px;">
+
+            @Html.TextBox("dinner" + i, cn.Dinner_Time, new { @class = "timePick"})
+
+        </div>
+
+        <label class="control-label col-sm-2">Должность:</label>
+        <div class="col-sm-3" style="padding-top: 8px;">
+            @Html.TextBox("post" + i, cn.Post)
+        </div>
+    </div>
+    
+    
+            
+    <hr style="margin: 0; background-color: black !important; height: 1px;" />
+    
+            i++;
+        }
+    }
+        
+    <br />
+    <div class="form-group">
+        <label class="control-label col-sm-2">Контактное лицо:</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" id="addName1" name="addName1" />
+        </div>
+
+        <label class="control-label col-sm-2">Телефон:</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" id="addTel1" name="addTel1" />
+        </div>
+        @*<div class="col-sm-1">
+            <input type="button" class="form-control" id="addNumber" value="+" style="width: 26px;" onclick="addNewTellNumder(); return false;" />
+        </div>*@
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-2">Время обеда:</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control timePick" id="addDinner1" name="addDinner1" />
+        </div>
+
+        <label class="control-label col-sm-2">Должность:</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" id="addPost1" name="addPost1" />
+        </div>
+    </div>
+    
+    <input type="button" value="+" onclick="addNewFields(); return false;" />
+
+    
+    
+    <div class="form-group" id="buttonsDiv">
+        <br />
+        <br />
+        <div class="col-sm-3">
+            <input type="submit" class="form-control" id="save" value="Сохранить" name="Save" />
+        </div>
+        @if (((CRM.Employees)Session["CurrentUser"]).Role == 1)
+        {
+            <div class="col-sm-3">
+                <input type="submit" class="form-control" id="delete" value="Удалить" name="Delete" />
+            </div>
+        }
+    </div>
+}
+
+
+<script type="text/javascript" >
+    
+        $('#client_Registration_Date').datepicker({
+            format: 'dd.mm.yyyy'
+        });
+
+        $('[class*=timePick]').timepicker({
+            minuteStep : 10,
+            showMeridian: false,
+            defaultTime: false
+        });
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+

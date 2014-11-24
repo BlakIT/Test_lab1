@@ -1,0 +1,412 @@
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\CRM.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\CRM.pdb
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\Antlr3.Runtime.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\DotNetOpenAuth.AspNet.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\DotNetOpenAuth.Core.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\DotNetOpenAuth.OAuth.Consumer.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\DotNetOpenAuth.OAuth.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\DotNetOpenAuth.OpenId.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\EntityFramework.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\Microsoft.Data.Edm.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\Microsoft.Data.OData.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\Microsoft.Web.Infrastructure.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\Microsoft.Web.WebPages.OAuth.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\Newtonsoft.Json.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\System.Net.Http.Formatting.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\System.Spatial.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\System.Web.Helpers.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\System.Web.Http.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\System.Web.Http.OData.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\System.Web.Http.WebHost.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\System.Web.Mvc.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\System.Web.Optimization.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\System.Web.Razor.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\System.Web.WebPages.Deployment.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\System.Web.WebPages.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\System.Web.WebPages.Razor.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\WebGrease.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\WebMatrix.Data.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\WebMatrix.WebData.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\EntityFramework.xml
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\Newtonsoft.Json.xml
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\System.Net.Http.Formatting.xml
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\System.Web.Helpers.xml
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\System.Web.Http.xml
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\System.Web.Http.WebHost.xml
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\System.Web.Mvc.xml
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\System.Web.Razor.xml
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\System.Web.WebPages.xml
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\System.Web.WebPages.Deployment.xml
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\System.Web.WebPages.Razor.xml
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\WebMatrix.Data.xml
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\Microsoft.Web.WebPages.OAuth.xml
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\WebMatrix.WebData.xml
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\DotNetOpenAuth.AspNet.xml
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\DotNetOpenAuth.Core.xml
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\DotNetOpenAuth.OAuth.Consumer.xml
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\DotNetOpenAuth.OAuth.xml
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\DotNetOpenAuth.OpenId.xml
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\System.Web.Http.OData.xml
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\Microsoft.Data.Edm.xml
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\Microsoft.Data.OData.xml
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\System.Spatial.xml
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\ru\EntityFramework.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\ru\System.Net.Http.Formatting.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\ru\System.Web.Helpers.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\ru\System.Web.Http.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\ru\System.Web.Http.WebHost.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\ru\System.Web.Mvc.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\ru\System.Web.Optimization.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\ru\System.Web.Razor.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\ru\System.Web.WebPages.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\ru\System.Web.WebPages.Deployment.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\ru\System.Web.WebPages.Razor.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\ru\WebMatrix.Data.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\ru\Microsoft.Web.WebPages.OAuth.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\ru\WebMatrix.WebData.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\ru\System.Web.Http.OData.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\de\Microsoft.Data.Edm.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\es\Microsoft.Data.Edm.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\fr\Microsoft.Data.Edm.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\it\Microsoft.Data.Edm.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\ja\Microsoft.Data.Edm.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\ko\Microsoft.Data.Edm.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\ru\Microsoft.Data.Edm.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\de\Microsoft.Data.OData.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\es\Microsoft.Data.OData.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\fr\Microsoft.Data.OData.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\it\Microsoft.Data.OData.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\ja\Microsoft.Data.OData.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\ko\Microsoft.Data.OData.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\ru\Microsoft.Data.OData.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\de\System.Spatial.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\es\System.Spatial.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\fr\System.Spatial.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\it\System.Spatial.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\ja\System.Spatial.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\ko\System.Spatial.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\ru\System.Spatial.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\zh-Hans\System.Spatial.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\bin\zh-Hant\System.Spatial.resources.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\obj\Debug\CRM.csprojResolveAssemblyReference.cache
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\obj\Debug\CRM.dll
+c:\users\зефирка\documents\visual studio 2012\Projects\CRM\CRM\obj\Debug\CRM.pdb
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\CRM.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\CRM.pdb
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\System.Net.Http.Formatting.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\System.Web.Helpers.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\System.Web.Http.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\System.Web.Http.WebHost.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\System.Web.Mvc.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\System.Web.Razor.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\System.Web.WebPages.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\System.Web.WebPages.Razor.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\WebMatrix.Data.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\WebMatrix.WebData.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\EntityFramework.xml
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\Microsoft.Web.Infrastructure.xml
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\Newtonsoft.Json.xml
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\System.Net.Http.Formatting.xml
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\System.Web.Helpers.xml
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\System.Web.Http.xml
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\System.Web.Http.WebHost.xml
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\System.Web.Mvc.xml
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\System.Web.Razor.xml
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\System.Web.WebPages.xml
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\System.Web.WebPages.Razor.xml
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\WebMatrix.Data.xml
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\WebMatrix.WebData.xml
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\DotNetOpenAuth.Core.xml
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\System.Web.Http.OData.xml
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\Microsoft.Data.Edm.xml
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\Microsoft.Data.OData.xml
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\System.Spatial.xml
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\ru\EntityFramework.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\ru\System.Net.Http.Formatting.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\ru\System.Web.Helpers.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\ru\System.Web.Http.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\ru\System.Web.Http.WebHost.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\ru\System.Web.Mvc.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\ru\System.Web.Optimization.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\ru\System.Web.Razor.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\ru\System.Web.WebPages.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\ru\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\ru\System.Web.WebPages.Razor.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\ru\WebMatrix.Data.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\ru\WebMatrix.WebData.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\ru\System.Web.Http.OData.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\de\Microsoft.Data.OData.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\es\Microsoft.Data.OData.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\it\Microsoft.Data.OData.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\de\System.Spatial.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\es\System.Spatial.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\fr\System.Spatial.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\it\System.Spatial.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\ja\System.Spatial.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\ko\System.Spatial.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\ru\System.Spatial.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\zh-Hans\System.Spatial.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\obj\Debug\CRM.csprojResolveAssemblyReference.cache
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\obj\Debug\CRM.dll
+C:\Users\Пикачу\Desktop\работа\CRM\CRM\obj\Debug\CRM.pdb
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\obj\Debug\CRM.csprojResolveAssemblyReference.cache
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\obj\Debug\CRM.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\obj\Debug\CRM.pdb
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\CRM.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\CRM.pdb
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\System.Net.Http.Formatting.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\System.Web.Helpers.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\System.Web.Http.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\System.Web.Http.WebHost.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\System.Web.Mvc.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\System.Web.Razor.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\System.Web.WebPages.Deployment.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\System.Web.WebPages.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\System.Web.WebPages.Razor.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\WebMatrix.Data.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\WebMatrix.WebData.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\Microsoft.Web.Infrastructure.xml
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\Newtonsoft.Json.xml
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\System.Net.Http.Formatting.xml
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\System.Web.Helpers.xml
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\System.Web.Http.xml
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\System.Web.Http.WebHost.xml
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\System.Web.Mvc.xml
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\System.Web.Razor.xml
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\System.Web.WebPages.xml
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\System.Web.WebPages.Deployment.xml
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\System.Web.WebPages.Razor.xml
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\WebMatrix.Data.xml
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\WebMatrix.WebData.xml
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\DotNetOpenAuth.Core.xml
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\System.Web.Http.OData.xml
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\Microsoft.Data.Edm.xml
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\Microsoft.Data.OData.xml
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\System.Spatial.xml
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\ru\System.Web.Optimization.resources.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\ru\System.Web.Http.OData.resources.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\de\Microsoft.Data.OData.resources.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\es\Microsoft.Data.OData.resources.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\it\Microsoft.Data.OData.resources.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\de\System.Spatial.resources.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\es\System.Spatial.resources.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\fr\System.Spatial.resources.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\it\System.Spatial.resources.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\ja\System.Spatial.resources.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\ko\System.Spatial.resources.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\ru\System.Spatial.resources.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\zh-Hans\System.Spatial.resources.dll
+C:\Users\d.danilov\Desktop\CRM\CRM\CRM\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\CRM.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\CRM.pdb
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\System.Net.Http.Formatting.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\System.Web.Helpers.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\System.Web.Http.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\System.Web.Http.WebHost.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\System.Web.Mvc.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\System.Web.Razor.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\System.Web.WebPages.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\System.Web.WebPages.Razor.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\WebMatrix.Data.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\WebMatrix.WebData.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\EntityFramework.xml
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\Microsoft.Web.Infrastructure.xml
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\Newtonsoft.Json.xml
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\System.Net.Http.Formatting.xml
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\System.Web.Helpers.xml
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\System.Web.Http.xml
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\System.Web.Http.WebHost.xml
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\System.Web.Mvc.xml
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\System.Web.Razor.xml
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\System.Web.WebPages.xml
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\System.Web.WebPages.Razor.xml
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\WebMatrix.Data.xml
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\WebMatrix.WebData.xml
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\DotNetOpenAuth.Core.xml
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\System.Web.Http.OData.xml
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\Microsoft.Data.Edm.xml
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\Microsoft.Data.OData.xml
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\System.Spatial.xml
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\ru\EntityFramework.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\ru\System.Net.Http.Formatting.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\ru\System.Web.Helpers.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\ru\System.Web.Http.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\ru\System.Web.Http.WebHost.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\ru\System.Web.Mvc.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\ru\System.Web.Optimization.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\ru\System.Web.Razor.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\ru\System.Web.WebPages.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\ru\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\ru\System.Web.WebPages.Razor.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\ru\WebMatrix.Data.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\ru\WebMatrix.WebData.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\ru\System.Web.Http.OData.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\de\Microsoft.Data.OData.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\es\Microsoft.Data.OData.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\it\Microsoft.Data.OData.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\de\System.Spatial.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\es\System.Spatial.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\fr\System.Spatial.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\it\System.Spatial.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\ja\System.Spatial.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\ko\System.Spatial.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\ru\System.Spatial.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\zh-Hans\System.Spatial.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\obj\Debug\CRM.csprojResolveAssemblyReference.cache
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\obj\Debug\CRM.dll
+C:\Users\Пикачу\Desktop\работа\Новая папка\CRM\CRM\CRM\obj\Debug\CRM.pdb
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\CRM.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\CRM.pdb
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\Microsoft.Web.Infrastructure.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\System.Net.Http.Formatting.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\System.Web.Helpers.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\System.Web.Http.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\System.Web.Http.WebHost.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\System.Web.Mvc.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\System.Web.Razor.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\System.Web.WebPages.Deployment.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\System.Web.WebPages.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\System.Web.WebPages.Razor.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\WebMatrix.Data.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\WebMatrix.WebData.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\EntityFramework.xml
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\Microsoft.Web.Infrastructure.xml
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\Newtonsoft.Json.xml
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\System.Net.Http.Formatting.xml
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\System.Web.Helpers.xml
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\System.Web.Http.xml
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\System.Web.Http.WebHost.xml
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\System.Web.Mvc.xml
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\System.Web.Razor.xml
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\System.Web.WebPages.xml
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\System.Web.WebPages.Deployment.xml
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\System.Web.WebPages.Razor.xml
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\WebMatrix.Data.xml
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\WebMatrix.WebData.xml
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\DotNetOpenAuth.AspNet.xml
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\DotNetOpenAuth.Core.xml
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\DotNetOpenAuth.OAuth.xml
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\DotNetOpenAuth.OpenId.xml
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\System.Web.Http.OData.xml
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\Microsoft.Data.Edm.xml
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\Microsoft.Data.OData.xml
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\System.Spatial.xml
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\ru\EntityFramework.resources.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\ru\System.Web.Optimization.resources.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\ru\System.Web.Http.OData.resources.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\de\Microsoft.Data.Edm.resources.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\es\Microsoft.Data.Edm.resources.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\it\Microsoft.Data.Edm.resources.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\de\Microsoft.Data.OData.resources.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\es\Microsoft.Data.OData.resources.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\fr\Microsoft.Data.OData.resources.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\it\Microsoft.Data.OData.resources.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\ja\Microsoft.Data.OData.resources.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\ko\Microsoft.Data.OData.resources.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\ru\Microsoft.Data.OData.resources.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\de\System.Spatial.resources.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\es\System.Spatial.resources.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\fr\System.Spatial.resources.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\it\System.Spatial.resources.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\ja\System.Spatial.resources.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\ko\System.Spatial.resources.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\ru\System.Spatial.resources.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\zh-Hans\System.Spatial.resources.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\bin\zh-Hant\System.Spatial.resources.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\obj\Debug\CRM.csprojResolveAssemblyReference.cache
+D:\Работа\blakIT\ЦРМ\CRM\CRM\obj\Debug\CRM.dll
+D:\Работа\blakIT\ЦРМ\CRM\CRM\obj\Debug\CRM.pdb

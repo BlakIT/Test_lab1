@@ -1,0 +1,29 @@
+﻿@model List<CRM.Models.EmployeesMail>
+
+
+    <ul id="MailUl">
+        <li><a href='javascript:LoadPartialView(3);' >Входящие</a></li>
+        <li><a href='javascript:LoadPartialView(4);' >Отправленные</a></li>
+        <li><a href='javascript:LoadPartialView(5);'>Написать</a></li>
+    </ul>
+
+<table id="MailTable">
+    @foreach (CRM.Models.EmployeesMail temp in Model)
+    {
+        string trClass = "";
+
+        if (temp.IsRead == 0)
+        { trClass = "NotRead"; }
+
+        string littleText = temp.Text.Length > 30 ? temp.Text.Substring(0, 30) + "..." : temp.Text;
+        
+        <tr class="@trClass" ondblclick="LoadMail(this.rowIndex)">
+            <td>@temp.AuthorName</td>
+            <td> 
+                @littleText
+            </td>
+            <td>@temp.Create_Date</td>
+            <td>@temp.Important</td>
+        </tr>
+    }
+</table>

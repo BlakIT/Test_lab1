@@ -1,0 +1,49 @@
+.datagrid {
+	font: normal 12px/150% Times New Roman, Times, serif; 
+	background: #fff; 
+	overflow: hidden; 
+	border: 1px solid #000000; 
+}
+
+.datagrid table { 
+	border-collapse: collapse; 
+	text-align: left; 
+	width: 100%; 
+	border-bottom: none;
+    margin-top:0;
+} 
+
+.datagrid table tbody tr:first-child td:nth-child(4),
+.datagrid table tbody tr:first-child td:nth-child(6) { 
+	width: 22px;
+}
+
+.datagrid table tbody tr:last-child { 
+	height: 300px; 
+}
+
+
+.datagrid table td, 
+.datagrid table th { 
+	padding: 2px 0px; 
+	font-size: 18px;
+}
+
+.datagrid table tbody td { 
+	color: #000000; 
+	border-left: 1px solid #000000;
+	font-size: 12px;
+	border-bottom: 1px solid #000000;
+	font-weight: normal; 
+}
+
+#left_ul{
+	list-style: none;
+	width: 130px;
+	padding-left: 20px;
+	margin-right: -80px;
+}
+
+#left_ul li{
+	padding-bottom: 10px;
+}

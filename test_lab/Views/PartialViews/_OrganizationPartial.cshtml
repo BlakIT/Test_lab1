@@ -1,0 +1,152 @@
+﻿@model List<CRM.Models.ClientsInfo>
+
+
+<div class="container-fluid">
+    <div class="row" style="font-size: 14px;">
+        <div class="col-xs-2">
+            <b>Название</b>
+        </div>
+
+        <div class="col-xs-2">
+            <b>Адресс</b>
+        </div>
+
+        <div class="col-xs-1">
+            <b>Ф.И.О.</b>
+        </div>
+
+        <div class="col-xs-2">
+            <b>Должность</b>
+        </div>
+
+        <div class="col-xs-2">
+            <b>Телефон</b>
+        </div>        
+
+        @if (((CRM.Employees)Session["CurrentUser"]).Role == 1)
+        {
+            <div class="col-xs-1">
+                <b>Время обеда</b>
+            </div>
+        
+            <div class="col-xs-2">
+                <b>Менеджер</b>
+            </div>
+        }
+        else
+        {
+            <div class="col-xs-2">
+            <b>Время обеда</b>
+        </div>
+        }
+    </div>
+    <hr style="margin: 0; background-color: black !important; height: 1px;" />
+</div>
+
+<div class="container-fluid" style="max-height: 800px; overflow-y: scroll;" id="ClientRows">
+    @{
+        
+        foreach (CRM.Models.ClientsInfo temp in Model)
+        {
+        <div class="row" onclick="onClientsTablesTrClick(this);" ondblclick="ClientDblClick(this);">
+
+            <div style="display: none;">
+                @temp.ID
+            </div>
+
+            <div class="col-xs-2">
+                @temp.Title
+            </div>
+
+            <div class="col-xs-2">
+                @temp.Address
+            </div>
+
+            <div class="col-xs-1">
+                @temp.FIO
+            </div>
+
+            <div class="col-xs-2">
+                @temp.Post
+            </div>
+
+            <div class="col-xs-2">
+                @temp.Telephone
+            </div>
+
+            @if (((CRM.Employees)Session["CurrentUser"]).Role == 1)
+            {
+                
+                <div class="col-xs-2">
+                    @temp.Dinner_Time
+                </div>   
+                
+                <div class="col-xs-1" >
+                    @CRM.Helper.Helper.GetEmployeeByID(temp.ID_Employee).FIO
+                </div>    
+                
+            }
+            else
+            {                     
+
+                <div class="col-xs-2">
+                    @temp.Dinner_Time
+                </div>
+            }
+
+
+        </div>
+        <hr style="margin: 0; background-color: black !important; height: 1px;" />
+        }
+        
+        
+    }
+
+</div>
+<br />
+<br />
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="form-group">
+            <div class="col-xs-11">
+                <textarea rows="5" class="form-control" id="mainInput" style="resize: none;" disabled="disabled"></textarea>
+            </div>
+            <div class="col-xs-1">
+                <p>
+                    <button type="button" id="saveButton" onclick="SaveDialog();" class="btn btn-default" style="border-radius: 25px 25px;" disabled="disabled">Save</button>
+                </p>
+                <p style="margin-top: 32px;">
+                    <button type="button" id="clearButton" onclick="CleanDialog();" class="btn btn-default" style="border-radius: 25px 25px;" disabled="disabled">Clean</button>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <br /><br/>
+    <div class="row">
+        <div class="form-group">
+            <div class="col-xs-6">
+                <textarea rows="2" class="form-control" id="textNap" style="resize: none;" ></textarea>
+            </div>
+
+            <div class="col-xs-2">
+                <input type="text"  class="form-control" id="dateNap"  />
+            </div>
+
+            <div class="col-xs-2">
+                <input type="text"  class="form-control" id="timeNap" />
+            </div>
+            <div class="col-xs-1">
+                <p>
+                    <button type="button" id="saveNapButton" onclick="SaveReminder();" class="btn btn-default" style="border-radius: 25px 25px;" >Напомнить</button>
+                </p>
+                
+            </div>
+        </div>
+
+    </div>
+</div>
+
+

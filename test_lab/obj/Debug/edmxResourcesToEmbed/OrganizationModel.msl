@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище OrganizationsModelContainer" CdmEntityContainer="OrganizationsEntities">
+    <EntitySetMapping Name="Clients">
+      <EntityTypeMapping TypeName="OrganizationsModel.Clients">
+        <MappingFragment StoreEntitySet="Clients">
+          <ScalarProperty Name="ID_Client" ColumnName="ID_Client" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Registration_Date" ColumnName="Registration_Date" />
+          <ScalarProperty Name="ID_Employee" ColumnName="ID_Employee" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Post_Address" ColumnName="Post_Address" />
+          <ScalarProperty Name="UNN_UNP" ColumnName="UNN_UNP" />
+          <ScalarProperty Name="Kind_Activity" ColumnName="Kind_Activity" />
+          <ScalarProperty Name="Rating" ColumnName="Rating" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="OrganizationsModel.Employees">
+        <MappingFragment StoreEntitySet="Employees">
+          <ScalarProperty Name="ID_Employee" ColumnName="ID_Employee" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="FIO" ColumnName="FIO" />
+          <ScalarProperty Name="Post" ColumnName="Post" />
+          <ScalarProperty Name="Registration_Date" ColumnName="Registration_Date" />
+          <ScalarProperty Name="Date_Entry" ColumnName="Date_Entry" />
+          <ScalarProperty Name="Date_Birth" ColumnName="Date_Birth" />
+          <ScalarProperty Name="Date_Admission" ColumnName="Date_Admission" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contact_Name">
+      <EntityTypeMapping TypeName="OrganizationsModel.Contact_Name">
+        <MappingFragment StoreEntitySet="Contact_Name">
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="ID_Clients" ColumnName="ID_Clients" />
+          <ScalarProperty Name="Dinner_Time" ColumnName="Dinner_Time" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Post" ColumnName="Post" />
+          <ScalarProperty Name="FIO" ColumnName="FIO" />
+          <ScalarProperty Name="ID_Contact_Name" ColumnName="ID_Contact_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Content">
+      <EntityTypeMapping TypeName="OrganizationsModel.Content">
+        <MappingFragment StoreEntitySet="Content">
+          <ScalarProperty Name="Important" ColumnName="Important" />
+          <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+          <ScalarProperty Name="Create_Date" ColumnName="Create_Date" />
+          <ScalarProperty Name="ID_Content_Type" ColumnName="ID_Content_Type" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ID_Content" ColumnName="ID_Content" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Content_Type">
+      <EntityTypeMapping TypeName="OrganizationsModel.Content_Type">
+        <MappingFragment StoreEntitySet="Content_Type">
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="ID_Content_Type" ColumnName="ID_Content_Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employee_To_Content">
+      <EntityTypeMapping TypeName="OrganizationsModel.Employee_To_Content">
+        <MappingFragment StoreEntitySet="Employee_To_Content">
+          <ScalarProperty Name="ID_Addressee_Employee" ColumnName="ID_Addressee_Employee" />
+          <ScalarProperty Name="ID_Author_Employee" ColumnName="ID_Author_Employee" />
+          <ScalarProperty Name="ID_Content" ColumnName="ID_Content" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employee_Clients_Content">
+      <EntityTypeMapping TypeName="OrganizationsModel.Employee_Clients_Content">
+        <MappingFragment StoreEntitySet="Employee_Clients_Content">
+          <ScalarProperty Name="ID_Addressee_Client" ColumnName="ID_Addressee_Client" />
+          <ScalarProperty Name="ID_Author_Employee" ColumnName="ID_Author_Employee" />
+          <ScalarProperty Name="ID_Content" ColumnName="ID_Content" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

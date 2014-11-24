@@ -1,0 +1,89 @@
+﻿@model List<CRM.Employees>
+
+<div class="container-fluid">
+    <div class="row" style="font-size:14px;">
+        <div class="col-xs-2">
+            <b>Ф.И.О.</b>
+        </div>
+
+        <div class="col-xs-2">
+            <b>Должность</b>
+        </div>
+
+        <div class="col-xs-2">
+            <b>Дата приема</b>
+        </div>
+
+        <div class="col-xs-2">
+            <b>Последний вход</b>
+        </div>
+
+        <div class="col-xs-2">
+            <b>Дата рождения</b>
+        </div>
+
+        <div class="col-xs-2">
+            <b>Адресс</b>
+        </div>
+    </div>
+    <hr style="margin:0; background-color:black !important;	height:1px;" />
+
+     @{
+        string role;
+        
+        foreach (CRM.Employees temp in Model)
+        {
+            
+            switch(temp.Role)
+            {
+                case 1:
+                    role = "admin";
+                    break;
+                    
+                case 2:
+                    role = "manager";
+                    break;
+                    
+                default:
+                    role = "employe";
+                    break;
+            }
+            
+            
+            <div class="row" onclick="onEmployeesTablesTrClick(this);" ondblclick="EmployeesDblClick(this);">
+                <div class="col-xs-2">
+                    @temp.FIO
+                </div>
+
+                <div class="col-xs-2">
+                    @temp.Post
+                </div>
+
+                <div class="col-xs-2">
+                    @temp.Date_Admission
+                </div>
+
+                <div class="col-xs-2">
+                    @temp.Date_Entry
+                </div>
+
+                <div class="col-xs-2">
+                    @temp.Date_Birth
+                </div>
+
+                <div class="col-xs-2">
+                    @temp.Address
+                </div>
+
+                <div style="display:none;">
+                   @temp.ID_Employee
+                </div>
+            </div>
+        <hr style="margin:0; background-color:black !important;	height:1px;" />
+     }
+    }
+</div>
+
+
+
+

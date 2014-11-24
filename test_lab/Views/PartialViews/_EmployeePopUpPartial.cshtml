@@ -1,0 +1,80 @@
+﻿@model CRM.Employees
+
+<div class="popup-box" id="popup-box-2">
+    <div class="close">X</div>
+    <div class="top">
+        <h2>Добавление Сотрудника</h2>
+    </div>
+    @using (Html.BeginForm("SaveNewEmployee","Admin", FormMethod.Post))
+    {
+        
+        <div class="bottom">
+            <div class="editor-label">
+                Имя:
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.FIO)
+                @Html.ValidationMessageFor(model => model.FIO)
+            </div>
+
+            <div class="editor-label">
+                Дата рождения:
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Date_Birth)
+                @Html.ValidationMessageFor(model => model.Date_Birth)
+            </div>
+
+            <div class="editor-label">
+                Дата приема:
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Date_Admission)
+                @Html.ValidationMessageFor(model => model.Date_Admission)
+            </div>
+
+            <div class="editor-label">
+                Адрес:
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Address)
+                @Html.ValidationMessageFor(model => model.Address)
+            </div>
+
+            <div class="editor-label">
+                Логин:
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Login)
+                @Html.ValidationMessageFor(model => model.Login)
+            </div>
+
+            <div class="editor-label">
+                Пароль:
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Password)
+                @Html.ValidationMessageFor(model => model.Password)
+            </div>
+
+            <div class="editor-label">
+                Должность:
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Post)
+                @Html.ValidationMessageFor(model => model.Post)
+            </div>
+
+            <div class="editor-label">
+                Роль:
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Role)
+                @Html.ValidationMessageFor(model => model.Role)
+            </div>
+
+            <p>
+                <input type="submit" id="saveEmployeeButton" value="Сохранить" /></p>
+        </div>
+    }
+</div>

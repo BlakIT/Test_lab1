@@ -1,0 +1,66 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript">
+    function LoadPartialView(e) {
+        $('#infoTD').html("");
+        $('#mainCenter').load('@Url.Action("LoadPartial", "Manager")' + '?index=' + e);
+    }
+
+    function onClientsTablesTrClick(e) {
+
+        var childrens = $(e).children();
+
+        var currentClient = {
+            Name: $(childrens[0]).html(),
+            City: $(childrens[1]).html(),
+            Contact: $(childrens[2]).html(),
+            Post: $(childrens[3]).html(),
+            Telephone: $(childrens[4]).html(),
+            DinnerTime: $(childrens[5]).html()
+        }
+
+        $('#infoTD').html(
+            '<p> <h4>Название</h4>' + currentClient.Name + '</p>' +
+            '<p> <h4>Адресс</h4>' + currentClient.City + '</p>' +
+            '<p> <h4>Контактное лицо</h4>' + currentClient.Contact + '</p>' +
+            '<p> <h4>Должность</h4>' + currentClient.Post + '</p>' +
+            '<p> <h4>Телефон</h4>' + currentClient.Telephone + '</p>' +
+            '<p> <h4>Время обеда</h4>' + currentClient.DinnerTime + '</p>'
+            );
+
+    }
+
+
+</script>
+
+<table class="manager_table">
+    <tr>
+        <td>
+            <ul id="left_menu">
+                <li><a href='javascript:LoadPartialView(1);'>Организации</a></li>
+                <li><a href='javascript:LoadPartialView(2);'>Поручения</a></li>
+                <li><a href='javascript:LoadPartialView(3);'>Почта</a></li>
+                <li><a href='javascript:LoadPartialView(1);'>Счета</a></li>
+                <li><a href='javascript:LoadPartialView(1);'>Календарь</a></li>
+            </ul>
+        </td>
+
+        <td id="mainCenter">
+            @Html.Partial("~/Views/PartialViews/_OrganizationPartial.cshtml", (List<CRM.Models.ClientsInfo>)TempData["OrganizationList"])
+        </td>
+
+        <td id="infoTD">
+
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3" >
+            @Html.TextBox("MainTextBox")
+        </td>
+    </tr>
+</table>
+
+

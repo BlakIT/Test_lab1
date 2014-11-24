@@ -1,0 +1,432 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<script type="text/javascript">
+
+    var clickIndex = 0; //на какую ссылку мы нажали   3 - Входящие, 4 - Отправленные
+    var clickedRowIndex = 0;  //номер строки на  которую нажали  в таблице клиентов
+    var boxWidth = 500;   //ширина  pop UP окна
+
+    function LoadPartialView(e) {
+
+        $('#infoTD').html("");
+        $('#mainCenter').load('@Url.Action("LoadPartial", "Admin")' + '?index=' + e);
+        clickIndex = e;
+
+    }
+
+    function LoadLastDialogs() {
+
+        $('#dialogsParialDiv').html("");
+
+        var childrens = $("#ClientRows").children();
+        var childrens = $(childrens[2 * clickedRowIndex]).children();
+        var id = $(childrens[0]).text();
+
+        $('#dialogsParialDiv').load('@Url.Action("LoadDialogsInfoPartial", "Admin")' + '?id=' + id.trim());
+
+        $('.popup-link-4').trigger('click');
+    }
+
+    function ClickOkPopUp5() {
+        var t = $('input[name="radioEmpl"]:checked').attr('id');
+        $("#popup-link-5").text(t);
+
+        var e = $('input[name="radioEmpl"]:checked').val();
+        $("#client_ID_Employee").val(e);
+
+        $('.close').trigger('click');
+    }
+
+    function onEmployeesTablesTrClick(e) {
+
+
+        var childrens = $(e).children();
+        var secretFiled = $(childrens[6]).children();
+
+        var allRows = $(e).parent().children();
+
+        for (var t = 0; t < allRows.length; t++)
+            $(allRows[t]).css('background-color', 'transparent');
+
+        $(e).css('background-color', 'yellow');
+
+        var currentEmployee = {
+            Name: $(childrens[0]).html(),
+            City: $(childrens[5]).html(),
+            Post: $(childrens[1]).html(),
+            Role: $(secretFiled[1]).html(),
+            RegDate: $(secretFiled[0]).html()
+        }
+
+        $('#infoTD').html(
+            '<h4>Имя:</h4><b style="color:red;">' + currentEmployee.Name + '</b>' +
+            '<h4>Адресс:</h4><b style="color:red;">' + currentEmployee.City + '</b>' +
+            '<h4>Должность:</h4><b style="color:red;">' + currentEmployee.Post + '</b>' +
+            '<h4>Роль:</h4><b style="color:red;">' + currentEmployee.Role + '</b>' +
+            '<h4>Дата регистрации:</h4><b style="color:red;">' + currentEmployee.RegDate + '</b>'
+            );
+
+    }
+
+    function onClientsTablesTrClick(e) {
+
+        $('#saveButton').attr('disabled', false);
+        $('#clearButton').attr('disabled', false);
+        $('#mainInput').attr('disabled', false);
+
+        var childrens = $(e).children();
+
+        clickedRowIndex = $(e).index() / 2;
+        // $(MainSaveBut).removeAttr('disabled');
+
+        var allRows = $(e).parent().children();
+
+        for (var t = 0; t < allRows.length; t++)
+            $(allRows[t]).css('background-color', 'transparent');
+
+        $(e).css('background-color', 'yellow');
+
+        var currentClient = {
+            Name: $(childrens[1]).html(),
+            City: $(childrens[2]).html(),
+            Contact: $(childrens[3]).html(),
+            Post: $(childrens[4]).html(),
+            Telephone: $(childrens[5]).html(),
+            DinnerTime: $(childrens[6]).html()
+        }
+
+        $('#infoTD').html(
+            '<h4>Название:</h4> <b style="color:red;">' + currentClient.Name + '</b>' +
+            '<h4>Адресс:</h4> <b style="color:red;">' + currentClient.City + '</b>' +
+            '<h4>Контактное лицо:</h4> <b style="color:red;">' + currentClient.Contact + '</b>' +
+            '<h4>Должность:</h4> <b style="color:red;">' + currentClient.Post + '</b>' +
+            '<h4>Телефон:</h4> <b style="color:red;">' + currentClient.Telephone + '</b>' +
+            '<h4>Время обеда:</h4> <b style="color:red;">' + currentClient.DinnerTime + '</b>' +
+            '<h4 ><a href=\'javascript:LoadLastDialogs();\' style="color:red; text-decoration: underline;">Последние разговоры</a></h4>'
+            );
+
+    }
+
+    function LoadMail(e) {
+        $('#mainCenter').load('@Url.Action("LoadMail", "Admin")' + '?index=' + e + '&type=' + clickIndex);
+    }
+
+    function SaveDialog() {
+
+        var textBoxValue = $('#mainInput').val();
+
+        $.ajax(
+            {
+                url: "/Admin/SaveDialog",
+                data: { text: textBoxValue, index: clickedRowIndex },
+                type: 'POST',
+                success: function () {
+                    alert('ok');
+                    $('#mainInput').val('');
+                }
+            });
+    }
+
+    function SaveReminder() {
+
+        var text = $('#textNap').val();
+        var date = $('#dateNap').val();
+        var time =$('#timeNap').val();
+
+        $.ajax(
+            {
+                url: "/Admin/SaveReminder",
+                data: { text: text, date: date, time: time},
+                type: 'POST',
+                success: function () {
+                    alert('ok');
+                    $('#textNap').val('');
+                    $('#timeNap').val('');
+                    $('#dateNap').val('');
+                }
+            });
+    }
+
+    function CleanDialog() {
+        $('#mainInput').val("");
+    }
+
+    function DeleteClientClick() {
+
+        var childrens = $("#ClientsTable").children();
+        var childrens = $(childrens).children();
+        var childrens = $(childrens[clickedRowIndex]).children();
+
+        $.ajax(
+            {
+                url: "/Admin/DeleteClient",
+                data: { id: $(childrens[6]).text() },
+                type: 'POST',
+                success: function (result) {
+                    alert("Item deleted");
+                    location.reload();
+                }
+            });
+
+    }
+
+    function ClientDblClick(e) {
+
+        var childrens = $(e).children();
+
+        $('#infoTD').html("");
+
+        var id = $(childrens[0]).text();
+
+        var id = id.trim();
+
+        if (id != '')
+            $('#mainCenter').load('@Url.Action("LoadClientsInfoPartial", "Admin")' + '?id=' + id);
+    }
+
+    function EmployeesDblClick(e) {
+
+        var childrens = $(e).children();
+
+        $('#infoTD').html("");
+
+        var id = $(childrens[6]).text();
+
+        var id = id.trim();
+
+        if (id != '')
+            $('#mainCenter').load('@Url.Action("LoadEmployeesInfoPartial", "Admin")' + '?id=' + id);
+    }
+
+    function centerBox() {
+
+        /* определяем нужные данные */
+        var winWidth = $(window).width();
+        var winHeight = $(document).height();
+        var scrollPos = $(window).scrollTop();
+
+        /* Вычисляем позицию */
+
+        var disWidth = (winWidth - boxWidth) / 2
+        var disHeight = scrollPos + 150;
+
+        /* Добавляем стили к блокам */
+        $('.popup-box').css({ 'width': boxWidth + 'px', 'left': disWidth + 'px', 'top': disHeight + 'px' });
+        $('#blackout').css({ 'width': winWidth + 'px', 'height': winHeight + 'px' });
+
+        return false;
+    }
+
+    $(window).resize(centerBox);
+    $(window).scroll(centerBox);
+    centerBox();
+
+    function ReminderTimer() {
+        
+        $.ajax(
+            {
+                url: "/Admin/GetReminder",
+                type: 'POST',
+                success: function (data) {
+
+                    if (data != null)
+                        alert(data.Text);
+                }
+            });
+    }
+
+    $(document).ready(function () {
+        //$(MainSaveBut).attr('disabled', 'disabled');      
+
+        var id = setInterval(ReminderTimer, 10000);
+
+
+        $('#timeNap').timepicker({
+            minuteStep: 10,
+            showMeridian: false,
+            defaultTime: false
+        });
+
+        $('#dateNap').datepicker({
+            format: 'dd.mm.yyyy'
+        });
+        
+        $('body').append('<div id="blackout"></div>');        
+
+        $('[class*=popup-link]').click(function (e) {
+
+            /* Предотвращаем действия по умолчанию */
+            e.preventDefault();
+            e.stopPropagation();
+            centerBox();
+            /* Получаем id (последний номер в имени класса ссылки) */
+            var name = $(this).attr('class');
+            var id = name[name.length - 1];
+            var scrollPos = $(window).scrollTop();
+
+            /* Корректный вывод popup окна, накрытие тенью, предотвращение скроллинга */
+            $('#popup-box-' + id).show();
+            $('#blackout').show();
+            $('html,body').css('overflow', 'hidden');
+
+            /* Убираем баг в Firefox */
+            $('html').scrollTop(scrollPos);
+        });
+
+        $('[class*=popup-box]').click(function (e) {
+            /* Предотвращаем работу ссылки, если она являеться нашим popup окном */
+            e.stopPropagation();
+        });
+        $('html').click(function () {
+            var scrollPos = $(window).scrollTop();
+            /* Скрыть окно, когда кликаем вне его области */
+            $('[id^=popup-box-]').hide();
+            $('#blackout').hide();
+            $("html,body").css("overflow", "auto");
+            $('html').scrollTop(scrollPos);
+        });
+        $('.close').click(function () {
+            var scrollPos = $(window).scrollTop();
+            /* Скрываем тень и окно, когда пользователь кликнул по X */
+            $('[id^=popup-box-]').hide();
+            $('#blackout').hide();
+            $("html,body").css("overflow", "auto");
+            $('html').scrollTop(scrollPos);
+        });
+    });
+
+
+
+</script>
+
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link href="~/Content/main_table.css" rel="stylesheet" />
+<link href="~/Content/datepicker.css" rel="stylesheet" />
+<link href="~/Content/bootstrap-timepicker.css" rel="stylesheet" />
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">WebSiteName</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a class="dropdown-toggle" data-toggle="dropdown">Организации <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href='javascript:LoadPartialView(1);'>Список</a></li>
+                        <li><a class="popup-link-1" href="">Добавить организацию</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="dropdown-toggle" data-toggle="dropdown">Работники <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href='javascript:LoadPartialView(2);'>Список</a></li>
+                        <li><a class="popup-link-2" href="">Добавить сотрудника</a></li>
+                    </ul>
+                </li>
+                <li><a href='javascript:LoadPartialView(3);'>Почта</a></li>
+                <li><a href='javascript:LoadPartialView(1);'>Документы</a></li>
+                <li><a href='javascript:LoadPartialView(1);'>Статистика</a></li>
+                <li><a href='javascript:LoadPartialView(1);'>Календарь</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        @*<div class="col-sm-1" style="padding-left: 0; padding-right: 0;">
+            <ul class="nav nav-pills nav-stacked" role="tablist" id="leftNav">
+                <li><a href="#">Добавить фильтр+</a></li>
+                <li><a href="#">Все</a></li>
+                <li><a href="#">Важные</a></li>
+                <li><a href="#">Очередные</a></li>
+                <li><a href="#">Лалаа</a></li>
+                <li><a href="#">ЗА период</a></li>
+            </ul>
+        </div>*@
+
+        <div class="col-sm-10" id="mainCenter">
+
+
+
+            @{
+                if (TempData["InputMails"] == null)
+                { 
+                @Html.Partial("~/Views/PartialViews/_OrganizationPartial.cshtml", (List<CRM.Models.ClientsInfo>)TempData["OrganizationList"]);
+                }
+                else
+                {  
+                @Html.Partial("~/Views/PartialViews/_MailPartial.cshtml", (List<CRM.Models.EmployeesMail>)TempData["InputMails"]);
+                }
+                
+            }
+
+
+
+
+        </div>
+
+        <div class="col-sm-2" id="infoTD">
+        </div>
+
+    </div>
+</div>
+
+@* ----------------Pop Up For Clients-------------- *@
+@Html.Partial("~/Views/PartialViews/_OrganizationPopUpPartial.cshtml", new CRM.Clients())
+
+
+
+@* ----------------Pop Up For Employees-------------- *@
+@Html.Partial("~/Views/PartialViews/_EmployeePopUpPartial.cshtml", new CRM.Employees())
+
+
+
+@* ----------------Pop Up 4 For last dialogs-------------- *@
+<a style="display: none;" class="popup-link-4" href=""></a>
+
+<div class="popup-box" id="popup-box-4">
+    <div class="close">X</div>
+    <div class="top">
+        <h2>Последние разговоры</h2>
+    </div>
+    <div class="container-fluid" id="dialogsParialDiv" style="max-height: 500px; overflow-y: scroll;">
+    </div>
+</div>
+
+@* ----------------Pop Up 5 For Chose Employee for organization-------------- *@
+<a style="display: none;" class="popup-link-5" href=""></a>
+<div class="popup-box" id="popup-box-5">
+    <div class="close">X</div>
+    <div class="top">
+        <h2>Выберите кому достанется клиент</h2>
+    </div>
+    <div class="container-fluid">
+        @Html.Partial("~/Views/PartialViews/_ChoseEmployeePopUpPartial.cshtml", CRM.Helper.Helper.GetAllEmployees())
+        <br />
+        <input type="button" value="Ok" id="okButton" onclick="ClickOkPopUp5(); return false;" />
+    </div>
+</div>
+
+@* ---------------------------------------------------- *@
+
+
+
+
+@*<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>*@
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="~/Scripts/bootstrap-datepicker.js"></script>
+<script src="~/Scripts/bootstrap-timepicker.js"></script>
+
+
+
+

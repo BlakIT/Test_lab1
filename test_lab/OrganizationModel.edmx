@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Хранилище OrganizationsModel" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="Хранилище OrganizationsModelContainer">
+          <EntitySet Name="Clients" EntityType="Хранилище OrganizationsModel.Clients" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Contact_Name" EntityType="Хранилище OrganizationsModel.Contact_Name" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Content" EntityType="Хранилище OrganizationsModel.Content" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Content_Type" EntityType="Хранилище OrganizationsModel.Content_Type" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Employee_Clients_Content" EntityType="Хранилище OrganizationsModel.Employee_Clients_Content" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Employee_To_Content" EntityType="Хранилище OrganizationsModel.Employee_To_Content" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Employees" EntityType="Хранилище OrganizationsModel.Employees" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="Clients">
+          <Key>
+            <PropertyRef Name="ID_Client" />
+          </Key>
+          <Property Name="ID_Client" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" />
+          <Property Name="Registration_Date" Type="date" />
+          <Property Name="ID_Employee" Type="int" />
+          <Property Name="Address" Type="text" />
+          <Property Name="Post_Address" Type="text" />
+          <Property Name="UNN_UNP" Type="nvarchar" MaxLength="100" />
+          <Property Name="Kind_Activity" Type="nvarchar" MaxLength="50" />
+          <Property Name="Rating" Type="int" />
+        </EntityType>
+        <EntityType Name="Contact_Name">
+          <Key>
+            <PropertyRef Name="ID_Contact_Name" />
+          </Key>
+          <Property Name="ID_Contact_Name" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FIO" Type="varchar" MaxLength="150" />
+          <Property Name="Post" Type="varchar" MaxLength="50" />
+          <Property Name="Telephone" Type="varchar" MaxLength="50" />
+          <Property Name="Dinner_Time" Type="time" />
+          <Property Name="ID_Clients" Type="int" Nullable="false" />
+          <Property Name="Type" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Content">
+          <Key>
+            <PropertyRef Name="ID_Content" />
+          </Key>
+          <Property Name="ID_Content" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Text" Type="text" />
+          <Property Name="ID_Content_Type" Type="int" Nullable="false" />
+          <Property Name="Create_Date" Type="datetime" />
+          <Property Name="IsRead" Type="int" />
+          <Property Name="Important" Type="int" />
+        </EntityType>
+        <EntityType Name="Content_Type">
+          <Key>
+            <PropertyRef Name="ID_Content_Type" />
+          </Key>
+          <Property Name="ID_Content_Type" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Type" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Employee_Clients_Content">
+          <Key>
+            <PropertyRef Name="ID_Content" />
+            <PropertyRef Name="ID_Author_Employee" />
+            <PropertyRef Name="ID_Addressee_Client" />
+          </Key>
+          <Property Name="ID_Content" Type="int" Nullable="false" />
+          <Property Name="ID_Author_Employee" Type="int" Nullable="false" />
+          <Property Name="ID_Addressee_Client" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Employee_To_Content">
+          <Key>
+            <PropertyRef Name="ID_Content" />
+            <PropertyRef Name="ID_Author_Employee" />
+            <PropertyRef Name="ID_Addressee_Employee" />
+          </Key>
+          <Property Name="ID_Content" Type="int" Nullable="false" />
+          <Property Name="ID_Author_Employee" Type="int" Nullable="false" />
+          <Property Name="ID_Addressee_Employee" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Employees">
+          <Key>
+            <PropertyRef Name="ID_Employee" />
+          </Key>
+          <Property Name="ID_Employee" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Login" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Role" Type="int" Nullable="false" />
+          <Property Name="FIO" Type="text" />
+          <Property Name="Post" Type="nvarchar" MaxLength="50" />
+          <Property Name="Registration_Date" Type="date" />
+          <Property Name="Date_Entry" Type="datetime" />
+          <Property Name="Date_Birth" Type="datetime" />
+          <Property Name="Date_Admission" Type="datetime" />
+          <Property Name="Address" Type="text" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="OrganizationsModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="OrganizationsEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Clients" EntityType="OrganizationsModel.Clients" />
+          <EntitySet Name="Employees" EntityType="OrganizationsModel.Employees" />
+          <EntitySet Name="Contact_Name" EntityType="OrganizationsModel.Contact_Name" />
+          <EntitySet Name="Content" EntityType="OrganizationsModel.Content" />
+          <EntitySet Name="Content_Type" EntityType="OrganizationsModel.Content_Type" />
+          <EntitySet Name="Employee_To_Content" EntityType="OrganizationsModel.Employee_To_Content" />
+          <EntitySet Name="Employee_Clients_Content" EntityType="OrganizationsModel.Employee_Clients_Content" />
+        </EntityContainer>
+        <EntityType Name="Clients">
+          <Key>
+            <PropertyRef Name="ID_Client" />
+          </Key>
+          <Property Name="ID_Client" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Registration_Date" Type="DateTime" Precision="0" />
+          <Property Name="ID_Employee" Type="Int32" />
+          <Property Name="Address" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Post_Address" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="UNN_UNP" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Kind_Activity" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Rating" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Employees">
+          <Key>
+            <PropertyRef Name="ID_Employee" />
+          </Key>
+          <Property Name="ID_Employee" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Login" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Role" Type="Int32" Nullable="false" />
+          <Property Name="FIO" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Post" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Registration_Date" Type="DateTime" Precision="0" />
+          <Property Name="Date_Entry" Type="DateTime" Precision="3" />
+          <Property Name="Date_Birth" Type="DateTime" Precision="3" />
+          <Property Name="Date_Admission" Type="DateTime" Precision="3" />
+          <Property Name="Address" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Contact_Name">
+          <Key>
+            <PropertyRef Name="ID_Contact_Name" />
+          </Key>
+          <Property Type="Int32" Name="ID_Contact_Name" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="FIO" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Post" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Telephone" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Time" Name="Dinner_Time" Precision="7" />
+          <Property Type="Int32" Name="ID_Clients" Nullable="false" />
+          <Property Type="Int32" Name="Type" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Content">
+          <Key>
+            <PropertyRef Name="ID_Content" />
+          </Key>
+          <Property Type="Int32" Name="ID_Content" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Text" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ID_Content_Type" Nullable="false" />
+          <Property Type="DateTime" Name="Create_Date" Precision="3" />
+          <Property Type="Int32" Name="IsRead" />
+          <Property Type="Int32" Name="Important" />
+        </EntityType>
+        <EntityType Name="Content_Type">
+          <Key>
+            <PropertyRef Name="ID_Content_Type" />
+          </Key>
+          <Property Type="Int32" Name="ID_Content_Type" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="Type" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Employee_To_Content">
+          <Key>
+            <PropertyRef Name="ID_Content" />
+            <PropertyRef Name="ID_Author_Employee" />
+            <PropertyRef Name="ID_Addressee_Employee" />
+          </Key>
+          <Property Type="Int32" Name="ID_Content" Nullable="false" />
+          <Property Type="Int32" Name="ID_Author_Employee" Nullable="false" />
+          <Property Type="Int32" Name="ID_Addressee_Employee" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Employee_Clients_Content">
+          <Key>
+            <PropertyRef Name="ID_Content" />
+            <PropertyRef Name="ID_Author_Employee" />
+            <PropertyRef Name="ID_Addressee_Client" />
+          </Key>
+          <Property Type="Int32" Name="ID_Content" Nullable="false" />
+          <Property Type="Int32" Name="ID_Author_Employee" Nullable="false" />
+          <Property Type="Int32" Name="ID_Addressee_Client" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище OrganizationsModelContainer" CdmEntityContainer="OrganizationsEntities">
+          <EntitySetMapping Name="Clients">
+            <EntityTypeMapping TypeName="OrganizationsModel.Clients">
+              <MappingFragment StoreEntitySet="Clients">
+                <ScalarProperty Name="ID_Client" ColumnName="ID_Client" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Registration_Date" ColumnName="Registration_Date" />
+                <ScalarProperty Name="ID_Employee" ColumnName="ID_Employee" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Post_Address" ColumnName="Post_Address" />
+                <ScalarProperty Name="UNN_UNP" ColumnName="UNN_UNP" />
+                <ScalarProperty Name="Kind_Activity" ColumnName="Kind_Activity" />
+                <ScalarProperty Name="Rating" ColumnName="Rating" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="OrganizationsModel.Employees">
+              <MappingFragment StoreEntitySet="Employees">
+                <ScalarProperty Name="ID_Employee" ColumnName="ID_Employee" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Role" ColumnName="Role" />
+                <ScalarProperty Name="FIO" ColumnName="FIO" />
+                <ScalarProperty Name="Post" ColumnName="Post" />
+                <ScalarProperty Name="Registration_Date" ColumnName="Registration_Date" />
+                <ScalarProperty Name="Date_Entry" ColumnName="Date_Entry" />
+                <ScalarProperty Name="Date_Birth" ColumnName="Date_Birth" />
+                <ScalarProperty Name="Date_Admission" ColumnName="Date_Admission" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contact_Name">
+            <EntityTypeMapping TypeName="OrganizationsModel.Contact_Name">
+              <MappingFragment StoreEntitySet="Contact_Name">
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="ID_Clients" ColumnName="ID_Clients" />
+                <ScalarProperty Name="Dinner_Time" ColumnName="Dinner_Time" />
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+                <ScalarProperty Name="Post" ColumnName="Post" />
+                <ScalarProperty Name="FIO" ColumnName="FIO" />
+                <ScalarProperty Name="ID_Contact_Name" ColumnName="ID_Contact_Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Content">
+            <EntityTypeMapping TypeName="OrganizationsModel.Content">
+              <MappingFragment StoreEntitySet="Content">
+                <ScalarProperty Name="Important" ColumnName="Important" />
+                <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+                <ScalarProperty Name="Create_Date" ColumnName="Create_Date" />
+                <ScalarProperty Name="ID_Content_Type" ColumnName="ID_Content_Type" />
+                <ScalarProperty Name="Text" ColumnName="Text" />
+                <ScalarProperty Name="ID_Content" ColumnName="ID_Content" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Content_Type">
+            <EntityTypeMapping TypeName="OrganizationsModel.Content_Type">
+              <MappingFragment StoreEntitySet="Content_Type">
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="ID_Content_Type" ColumnName="ID_Content_Type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employee_To_Content">
+            <EntityTypeMapping TypeName="OrganizationsModel.Employee_To_Content">
+              <MappingFragment StoreEntitySet="Employee_To_Content">
+                <ScalarProperty Name="ID_Addressee_Employee" ColumnName="ID_Addressee_Employee" />
+                <ScalarProperty Name="ID_Author_Employee" ColumnName="ID_Author_Employee" />
+                <ScalarProperty Name="ID_Content" ColumnName="ID_Content" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employee_Clients_Content">
+            <EntityTypeMapping TypeName="OrganizationsModel.Employee_Clients_Content">
+              <MappingFragment StoreEntitySet="Employee_Clients_Content">
+                <ScalarProperty Name="ID_Addressee_Client" ColumnName="ID_Addressee_Client" />
+                <ScalarProperty Name="ID_Author_Employee" ColumnName="ID_Author_Employee" />
+                <ScalarProperty Name="ID_Content" ColumnName="ID_Content" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,24 @@
+﻿@model List<CRM.Models.DialogsInfo>
+
+
+
+    @foreach (CRM.Models.DialogsInfo dialog in Model)
+    {
+        <div class="row" >
+
+            <div class="col-sm-2">
+                @dialog.GetEmployeeName()
+            </div>
+
+            <div class="col-sm-9" style="max-width:300px; overflow-x:scroll;">
+                @dialog.content.Text
+            </div>
+
+            <div class="col-sm-1" >
+                @dialog.content.Create_Date
+            </div>
+
+        </div>
+        <br /> <br />
+    }
+

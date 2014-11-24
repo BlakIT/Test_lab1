@@ -1,0 +1,34 @@
+﻿<ul id="MailUl">
+    <li><a href='javascript:LoadPartialView(3);'>Входящие</a></li>
+    <li><a href='javascript:LoadPartialView(4);'>Отправленные</a></li>
+    <li><a href='javascript:LoadPartialView(5);'>Написать</a></li>
+</ul>
+
+@using (Html.BeginForm("SendNewMail", "Admin"))
+{
+
+    if ( ((CRM.Employees)Session["CurrentUser"]).Role == 1)
+        {
+            <p>
+                @Html.DropDownList("Type", new SelectList( new List<Object>{ 
+                           new { value = 3 , text = "Поручение"  },
+                           new { value = 4 , text = "Письмо" },
+                           new { value = 2 , text = "Задача" }
+                        },
+                      "value",
+                      "text",
+                       4))
+            </p>
+        }
+        
+    <p>
+       Кому - @Html.DropDownList("Adressee", new SelectList( (List<string>)ViewBag.Adressee ))
+    </p>
+    
+    <p>
+        @Html.TextArea("Message")
+    </p>
+    <p>
+        <input type="submit" value="Отправить"  />
+    </p>
+}

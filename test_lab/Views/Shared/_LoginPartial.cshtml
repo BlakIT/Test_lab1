@@ -1,0 +1,11 @@
+﻿@if (Session["CurrentUser"] != null)
+{
+    <text>
+        Здравствуйте, @( ((CRM.Employees)Session["CurrentUser"]).Login ) !
+        @Html.ActionLink("Выйти", "LogOut", "Account")
+    </text>
+} else {
+    <ul>
+        <li>@Html.ActionLink("Выполнить вход", "Index", "Account")</li>
+    </ul>
+}

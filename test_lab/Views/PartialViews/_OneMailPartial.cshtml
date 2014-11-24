@@ -1,0 +1,22 @@
+﻿@model CRM.Models.EmployeesMail
+
+<ul id="MailUl">
+    <li><a href='javascript:LoadPartialView(3);'>Входящие</a></li>
+    <li><a href='javascript:LoadPartialView(4);'>Отправленные</a></li>
+    <li><a href='javascript:LoadPartialView(5);'>Написать</a></li>
+</ul>
+
+<table>
+    <tr>
+        <td>
+            <p>От кого: @Model.AuthorName</p>
+        </td>        
+    </tr>
+    <tr>
+        <td>
+            <div style="font-size:20px; font-weight:bold; width:570px;">
+                @Model.Text
+            </div>
+        </td>
+    </tr>
+</table>

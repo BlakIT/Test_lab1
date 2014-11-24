@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище UsersModelContainer" CdmEntityContainer="UsersEntities">
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="UsersModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="ConfPass" ColumnName="ConfPass" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="DB_Path" ColumnName="DB_Path" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
