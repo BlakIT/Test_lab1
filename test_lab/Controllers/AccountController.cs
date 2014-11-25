@@ -17,22 +17,27 @@ namespace CRM.Controllers
 
         public ActionResult Index()
         {
+            if (Session["CurrentUser"] != null)
+                return RedirectToAction("Index", "Admin");
+
             return RedirectToAction("Index", "Home"); 
         }          
 
         
         public ActionResult Login(FormCollection form)
         {
-            string  login = form["login"];
+            string login = form["login"];
             string pass = form["pass"];
 
-            if ( Helper.UsersHelper.CheckLoginAndPass(login, pass) )
-            {
-                Users user = Helper.UsersHelper.Login(login, pass);
-                
+            Users user = Helper.UsersHelper.GetUserByLoginAndPass(login, pass);
+
+            if ( user != null)
+            {                
                 Helper.Helper.ChangeDBPath(user.DB_Path);
 
-                Session["CurrentUser"] = Helper.Helper.GetEmployeeByLogin(user.Login);
+                Employees em = Helper.Helper.GetEmployeeByLogin(user.Login);
+
+                Session["CurrentUser"] = em;
                
                 return RedirectToAction("Index", "Admin");
             }
@@ -42,15 +47,12 @@ namespace CRM.Controllers
 
         public ActionResult Registration(Users model)
         {
-            if(model.Pass != model.ConfPass)
+            Users user = Helper.UsersHelper.Registration(model);
+
+            if (user == null)
                 return RedirectToAction("Index", "Home");
 
-            if (Helper.UsersHelper.CheckLoginAndPass(model.Login, model.Pass))
-                return RedirectToAction("Index", "Home");
-
-            Helper.UsersHelper.RegisterNewUser(model);
-
-            Session["CurrentUser"] = Helper.Helper.GetEmployeeByLogin(model.Login); //Helper.UsersHelper.Login(model.Login, model.Pass);
+            Session["CurrentUser"] = Helper.Helper.GetEmployeeByLogin(user.Login);
 
             return RedirectToAction("Index", "Admin");
         }

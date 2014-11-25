@@ -149,4 +149,20 @@
     </div>
 </div>
 
+<script type="text/javascript">
 
+    $(document).ready(function () {
+
+
+        $('#timeNap').timepicker({
+            minuteStep: 10,
+            showMeridian: false,
+            defaultTime: false
+        });
+
+        $('#dateNap').datepicker({
+            format: 'dd.mm.yyyy'
+        });
+
+    })
+</script>

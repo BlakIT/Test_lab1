@@ -4,7 +4,6 @@
     <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="UsersModel.Users">
         <MappingFragment StoreEntitySet="Users">
-          <ScalarProperty Name="ConfPass" ColumnName="ConfPass" />
           <ScalarProperty Name="User_ID" ColumnName="User_ID" />
           <ScalarProperty Name="Login" ColumnName="Login" />
           <ScalarProperty Name="Pass" ColumnName="Pass" />

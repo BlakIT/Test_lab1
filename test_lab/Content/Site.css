@@ -1,5 +1,5 @@
 ﻿html {
-    background-color: #e2e2e2;
+    background-color: #efeeef;
     margin: 0;
     padding: 0;
 }
@@ -104,10 +104,13 @@ h5, h6 {
     padding-bottom: 35px;
 }
 
-.main-content {
-    background: url("../Images/accent.png") no-repeat;
-    padding-left: 10px;
-    padding-top: 30px;
+#top-nav {
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: #000;
+    margin-bottom: 40px;
 }
 
 .featured + .main-content {
@@ -119,10 +122,10 @@ header .content-wrapper {
 }
 
 footer {
+    color: white;
     clear: both;
     background-color: #e2e2e2;
     font-size: .8em;
-    height: 100px;
 }
 
 
@@ -657,9 +660,14 @@ tr.pager td {
         background-position: 10px 0;
     }
 
+    /*#myNavbar .navbar-nav .active>a {
+        background-color: #D00404 !important;
+        border-top-left-radius: 1em !important;
+        border-top-right-radius: 1em !important;
+    }*/
+
+
     .content-wrapper {
-        padding-right: 10px;
-        padding-left: 10px;
     }
 
     .featured .content-wrapper {
@@ -841,8 +849,8 @@ tr.pager td {
 
 
 #left_menu {
-    float:right;
-    list-style: none;    
+    float: right;
+    list-style: none;
     font-size: 18px;
     padding-left: 30px;
 }
@@ -875,40 +883,41 @@ tr.pager td {
     z-index: 9999999;
     font-size: 14px;
 }
- 
-.popup-box .close {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    font-family: Arial, Helvetica, sans-serif;  
-    font-weight: bold;
-    cursor: pointer;
-    color: #434343;
-    padding: 20px;
-    font-size: 20px;
-}
- 
-.popup-box .close:hover {
-    color: #000;
-}
- 
-.popup-box h2 {
-    padding: 0;
-    margin: 0;
-    font-size: 18px;
-}
-.popup-box .top {
-    padding: 20px;
-}
- 
-.popup-box .bottom {
-    background: #eee;
-    border-top: 1px solid #e5e5e5;
-    padding: 20px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
- 
+
+    .popup-box .close {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        cursor: pointer;
+        color: #434343;
+        padding: 20px;
+        font-size: 20px;
+    }
+
+        .popup-box .close:hover {
+            color: #000;
+        }
+
+    .popup-box h2 {
+        padding: 0;
+        margin: 0;
+        font-size: 18px;
+    }
+
+    .popup-box .top {
+        padding: 20px;
+    }
+
+    .popup-box .bottom {
+        background: #eee;
+        border-top: 1px solid #e5e5e5;
+        padding: 20px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
 #blackout {
     background: rgba(0,0,0,0.3);
     position: absolute;
@@ -926,7 +935,7 @@ tr.pager td {
 }
 
 #EditClientForm input {
-    width:125px;
+    width: 125px;
 }
 
 
@@ -934,9 +943,41 @@ tr.pager td {
 #leftNav > li > a:hover, #leftNav > li > a:focus {
     text-decoration: none;
     background-color: #458FC0;
-    color:white;
+    color: white;
 }
 
 #infoTD {
-    padding-right:0;
+    padding-right: 0;
 }
+
+/*----------------------------------------time picker----------------------------*/
+
+[class^="icon-"], [class*=" icon-"] {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-top: 1px;
+    line-height: 14px;
+    vertical-align: text-top;
+    background-image: url("../Images/glyphicons-halflings.png");
+    background-position: 14px 14px;
+    background-repeat: no-repeat;
+}
+
+.icon-chevron-up {
+    background-position: -288px -120px;
+}
+
+.icon-chevron-down {
+    background-position: -313px -119px;
+}
+
+
+/*.bootstrap-timepicker-widget td a {
+    background-image: url("../Images/up-click.png");
+}*/
+
+/*.icon-chevron-up {
+    background-image:url("../Images/glyphicons-halflings.png");
+    background-position: -288px -120px;
+}*/

@@ -3,88 +3,121 @@
     ViewBag.Title = "_PopUpPartial";
 }
 
+<script src="~/Scripts/validator.min.js"></script>
 
 <div class="popup-box" id="popup-box-1">
     <div class="close">X</div>
     <div class="top">
         <h2>Добавление Организации-Клиента</h2>
     </div>
-    @using (Html.BeginForm("SaveNewClient", "Admin", FormMethod.Post))
-    {
-        
-        <div class="bottom">
-            <div class="editor-label">
+
+
+    <form data-toggle="validator" role="form" action="/Admin/SaveNewClient" id="SaveNewClientForm" method="post" class="form-horizontal">
+
+        <div class="form-group">
+            <label class="control-label col-sm-4">Название:</label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" id="Title" name="Title" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-4">Дата регистрации:</label>
+            <div class="col-sm-5">
+                <input type="date" class="form-control" id="Registration_Date" name="Registration_Date" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-4">Адрес:</label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" id="Address" name="Address">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-4">Почтовый Адрес:</label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" id="Post_Address" name="Post_Address">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-4">УНН\УНП:</label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" id="UNN_UNP" name="UNN_UNP" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-4">Вид деятельности:</label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" id="Kind_Activity" name="Kind_Activity">
+            </div>
+        </div>
+
+
+        @*<div class="editor-label">
                 Название:
             </div>
             <div class="editor-field">
                 @Html.EditorFor(model => model.Title)
                 @Html.ValidationMessageFor(model => model.Title)
-            </div>
+            </div>*@
 
-            <div class="editor-label">
+        @*<div class="editor-label">
                 Дата регистрации:
             </div>
             <div class="editor-field">
                 @Html.EditorFor(model => model.Registration_Date)
                 @Html.ValidationMessageFor(model => model.Registration_Date)
-            </div>
+            </div>*@
 
-            <div class="editor-label">
-                Сотрудник:
-            </div>
-            <div class="editor-field">
-                @Html.EditorFor(model => model.ID_Employee)
-                @Html.ValidationMessageFor(model => model.ID_Employee)
-            </div>
+        @*<div class="editor-label">
+            Сотрудник:
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ID_Employee)
+            @Html.ValidationMessageFor(model => model.ID_Employee)
+        </div>*@
 
-            <div class="editor-label">
+        @*<div class="editor-label">
                 Адрес:
             </div>
             <div class="editor-field">
                 @Html.EditorFor(model => model.Address)
                 @Html.ValidationMessageFor(model => model.Address)
-            </div>
+            </div>*@
 
-            <div class="editor-label">
+        @*<div class="editor-label">
                 Почтовый адрес:
             </div>
             <div class="editor-field">
                 @Html.EditorFor(model => model.Post_Address)
                 @Html.ValidationMessageFor(model => model.Post_Address)
-            </div>
+            </div>*@
 
-            <div class="editor-label">
+        @*<div class="editor-label">
                 УНН\УНП:
             </div>
             <div class="editor-field">
                 @Html.EditorFor(model => model.UNN_UNP)
                 @Html.ValidationMessageFor(model => model.UNN_UNP)
-            </div>
+            </div>*@
 
-            <div class="editor-label">
+        @*<div class="editor-label">
                 Вид деятельности:
             </div>
             <div class="editor-field">
                 @Html.EditorFor(model => model.Kind_Activity)
                 @Html.ValidationMessageFor(model => model.Kind_Activity)
-            </div>
-
-            <p>
+            </div>*@
+        <div class="form-group">
+            <div class="col-sm-5 col-sm-offset-3">
                 <input type="submit" id="saveClientButton" value="Сохранить" />
-            </p>
+            </div>
         </div>
-    }
+
+    </form>
 </div>
 
-<script type="text/javascript">
-
-    $(document).ready(function () {
-
-        $('#Registration_Date').datepicker({
-            format: 'dd.mm.yyyy'
-        });
-
-    })
-    
-
-</script>

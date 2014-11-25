@@ -1,7 +1,13 @@
 ﻿@{
     ViewBag.Title = "Index";
 }
-
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('[data-toggle="popover"]').popover({
+            placement: 'top'
+        });
+    });
+</script>
 <script type="text/javascript">
 
     var clickIndex = 0; //на какую ссылку мы нажали   3 - Входящие, 4 - Отправленные
@@ -133,12 +139,12 @@
 
         var text = $('#textNap').val();
         var date = $('#dateNap').val();
-        var time =$('#timeNap').val();
+        var time = $('#timeNap').val();
 
         $.ajax(
             {
                 url: "/Admin/SaveReminder",
-                data: { text: text, date: date, time: time},
+                data: { text: text, date: date, time: time },
                 type: 'POST',
                 success: function () {
                     alert('ok');
@@ -224,7 +230,7 @@
     centerBox();
 
     function ReminderTimer() {
-        
+
         $.ajax(
             {
                 url: "/Admin/GetReminder",
@@ -242,18 +248,7 @@
 
         var id = setInterval(ReminderTimer, 10000);
 
-
-        $('#timeNap').timepicker({
-            minuteStep: 10,
-            showMeridian: false,
-            defaultTime: false
-        });
-
-        $('#dateNap').datepicker({
-            format: 'dd.mm.yyyy'
-        });
-        
-        $('body').append('<div id="blackout"></div>');        
+        $('body').append('<div id="blackout"></div>');
 
         $('[class*=popup-link]').click(function (e) {
 
@@ -306,7 +301,7 @@
 <link href="~/Content/datepicker.css" rel="stylesheet" />
 <link href="~/Content/bootstrap-timepicker.css" rel="stylesheet" />
 
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse" role="navigation" id="top-nav">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -337,7 +332,11 @@
                 <li><a href='javascript:LoadPartialView(1);'>Статистика</a></li>
                 <li><a href='javascript:LoadPartialView(1);'>Календарь</a></li>
             </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/Account/LogOut"><span class="glyphicon glyphicon-log-in"></span>Выйти</a></li>
+            </ul>
         </div>
+
     </div>
 </nav>
 
@@ -381,6 +380,12 @@
     </div>
 </div>
 
+@*<div class="bs-example">
+    <div class="popover-examples">
+        <a href="#" class="btn btn-primary" data-toggle="popover" tabindex="0" data-trigger="focus" title="Popover title" data-content="Default popover">Popover</a>
+        </div>
+    </div>*@
+
 @* ----------------Pop Up For Clients-------------- *@
 @Html.Partial("~/Views/PartialViews/_OrganizationPopUpPartial.cshtml", new CRM.Clients())
 
@@ -417,16 +422,14 @@
     </div>
 </div>
 
-@* ---------------------------------------------------- *@
-
-
 
 
 @*<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>*@
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script src="~/Scripts/bootstrap-datepicker.js"></script>
 <script src="~/Scripts/bootstrap-timepicker.js"></script>
+<script src="~/Scripts/bootstrap-popover.js"></script>
 
 
 
-
+@* ---------------------------------------------------- *@

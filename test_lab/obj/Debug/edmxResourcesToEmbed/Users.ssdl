@@ -12,6 +12,5 @@
     <Property Name="Pass" Type="text" Nullable="false" />
     <Property Name="DB_Path" Type="text" />
     <Property Name="Mail" Type="text" />
-    <Property Name="ConfPass" Type="text" />
   </EntityType>
 </Schema>

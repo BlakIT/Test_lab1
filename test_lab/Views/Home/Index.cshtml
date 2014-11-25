@@ -3,56 +3,69 @@
 @{
     ViewBag.Title = "Home Page";
 }
-
-<div class="container-fluid">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<script src="~/Scripts/validator.min.js"></script>
+<div class="container-fluid" style="padding-top:10%;">
     <div class="row">
         <div class="col-sm-5">
-            @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form", id = "LoginForm" }))
-            {
 
+            <form data-toggle="validator" role="form" action="/Account/Login" id="LoginForm" method="post" class="form-horizontal">
                 <div class="form-group">
-                    <label for="loginn">Login:</label>
-                    <input type="text" class="form-control" id="loginn" name="login">
+
+                    <div class="col-sm-7">
+                        <label for="loginn" class="control-label">Login:</label>
+                        <input type="text" class="form-control" id="loginn" name="login" required>
+                    </div>
+
                 </div>
                 <div class="form-group">
-                    <label for="pwd">Password:</label>
-                    <input type="password" class="form-control" id="pwd" name="pass">
+
+                    <div class="col-sm-7">
+                        <label for="pwd" class="control-label">Password:</label>
+                        <input type="password" class="form-control" id="pwd" name="pass" required>
+                    </div>
                 </div>
-    
+
                 <button type="submit" class="btn btn-default">Вход</button>
-            }
+
+            </form>
         </div>
         <div class="col-sm-7">
-            @using (Html.BeginForm("Registration", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form", id = "RegisterForm" }))
-            {
-    
+            <form data-toggle="validator" role="form" action="/Account/Registration" id="RegisterForm" method="post" class="form-horizontal">
+
                 <div class="form-group">
-                    <label class="control-label col-sm-2">Логин:</label>
-                    <div class="col-sm-3">
-                        @Html.EditorFor(model => model.Login, new { htmlAttributes = new { @class = "form-control" } })
+                    <label class="control-label col-sm-4">Логин:</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="Login" name="Login" required>                        
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label col-sm-4">Емэйл:</label>
-                    <div class="col-sm-3">
-                        @Html.EditorFor(model => model.Mail, new { htmlAttributes = new { @class = "form-control" } })
+                    <div class="col-sm-5">
+                        <input type="email" class="form-control" id="Mail" name="Mail" data-error="Incorrect email" required>  
+                        <div class="help-block with-errors"></div>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label col-sm-4">Пароль:</label>
-                    <div class="col-sm-3">
-                        @Html.EditorFor(model => model.Pass, new { htmlAttributes = new { @class = "form-control" } })
+                    <div class="col-sm-5">
+                        <input type="password" data-minlength="6" class="form-control" id="Pass" name="Pass" data-error="Minimum of 6 characters"  required>
+                        <span class="help-block with-errors"></span>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label col-sm-4">Подтвердите пароль:</label>
-                    <div class="col-sm-3">
-                        @Html.EditorFor(model => model.ConfPass, new { htmlAttributes = new { @class = "form-control" } })
+                    <div class="col-sm-5">
+                        <input type="password"  class="form-control" id="ConfPass" name="ConfPass" data-match="#Pass" data-match-error="Whoops, these don't match" required>
+                        <div class="help-block with-errors"></div>
                     </div>
                 </div>
-    
-                <button type="submit" class="btn btn-default">Регистрация</button>
-            }
+                <div class="form-group">
+                    <div class="col-sm-3 col-sm-offset-5">
+                        <button type="submit" class="btn btn-default">Регистрация</button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </div>

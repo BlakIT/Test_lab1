@@ -15,9 +15,9 @@
 
 </head>
 <body>
-    <header>
-        <div class="content-wrapper">
-            <div class="float-left">
+    
+        @* <div class="content-wrapper">
+           <div class="float-left">
                 <p class="site-title">@Html.ActionLink("эмблема здесь", "Index", "Home")</p>
             </div>
             <div class="float-right">
@@ -36,15 +36,15 @@
                     </ul>
                 </nav>
             </div>
-        </div>
-    </header>
+        </div>*@
+    
     <div id="body">
         @RenderSection("featured", required: false)
         <section class="content-wrapper main-content clear-fix">
             @RenderBody()
         </section>
     </div>
-    <footer>
+    <footer class="navbar navbar-fixed-bottom" style="background-color:grey;">
         <div class="content-wrapper">
             <div class="float-left">
                 <p>&copy; @DateTime.Now.Year — приложение ASP.NET MVC</p>

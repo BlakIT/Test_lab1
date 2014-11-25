@@ -1,12 +1,27 @@
 ﻿@model CRM.Models.ClientsInfoForEdit
 
+
+
 <script type="text/javascript">
+
+    $(document).ready(function () {
+        $('#client.Registration_Date').datepicker({
+            format: 'dd.mm.yyyy'
+        });
+
+        $('[class*=timePick]').timepicker({
+            minuteStep: 10,
+            showMeridian: false,
+            defaultTime: false
+        });
+    })
 
     var index = 2;
 
     function addNewFields() {
 
-        var txt = "<div id=\"divF" + index + "\" style=\"display:none;\"><br /><br /> <div class=\"form-group\">" +
+        var txt = "<hr style=\"margin: 0; background-color: black !important; height: 1px;\" />" +
+            "<div id=\"divF" + index + "\" style=\"display:none;\"><br /><br /> <div class=\"form-group\">" +
                     "<label class=\"control-label col-sm-2\">Имя сотрудника:</label> " +
                     "<div class=\"col-sm-4\">" +
                     "<input type=\"text\" class=\"form-control\" id=\"addName" + index + "\" name=\"addName" + index + "\" />" +
@@ -28,9 +43,7 @@
                 "<div class=\"col-sm-4\">" +
                     "<input type=\"text\" class=\"form-control\" id=\"addPost" + index + "\" name=\"addPost" + index + "\" />" +
                 "</div>" +
-            "</div>" +
-
-            "<input type=\"button\" value=\"+\" onclick=\"addNewFields(); return false;\"/> </div>";
+            "</div>";
 
         $("#buttonsDiv").before(txt);
 
@@ -44,6 +57,10 @@
             minuteStep: 10,
             showMeridian: false,
             defaultTime: false
+        });
+
+        $('#client.Registration_Date').datepicker({
+            format: 'dd.mm.yyyy'
         });
     }
 
@@ -98,36 +115,36 @@
     <div class="form-group">
         <label class="control-label col-sm-2">Название:</label>
         <div class="col-sm-3">
-            @Html.EditorFor(model => model.client.Title, new { htmlAttributes = new { @class = "form-control" } })
+            <input type="text" class="form-control" id="client.Title" name="client.Title" value="@Model.client.Title" required>
         </div>
 
         <label class="control-label col-sm-4">Дата регистрации:</label>
         <div class="col-sm-3">
-            @Html.EditorFor(model => model.client.Registration_Date, new { htmlAttributes = new { @class = "form-control" } })
+            <input type="text" class="form-control datePick" id="client.Registration_Date" style="width:150px;" name="client.Registration_Date" value="@Model.client.Registration_Date.ToString().Substring(0, 10)" required>
         </div>
     </div>
 
     <div class="form-group">
         <label class="control-label col-sm-2">Адрес:</label>
         <div class="col-sm-3">
-            @Html.EditorFor(model => model.client.Address, new { @class = "form-control" })
+            <input type="text" class="form-control" id="client.Address" value="@Model.client.Address" name="client.Address">
         </div>
 
         <label class="control-label col-sm-4">Почтовый адрес:</label>
         <div class="col-sm-3">
-            @Html.EditorFor(model => model.client.Post_Address, new { @class = "form-control", style = "width:150px;" })
+            <input type="text" class="form-control" style = "width:150px;" value="@Model.client.Post_Address" id="client.Post_Address" name="client.Post_Address">
         </div>
     </div>
 
     <div class="form-group">
         <label class="control-label col-sm-2">УНН\УНП:</label>
         <div class="col-sm-3">
-            @Html.EditorFor(model => model.client.UNN_UNP, new { @class = "form-control" })
+            <input type="text" class="form-control" id="client.UNN_UNP" value="@Model.client.UNN_UNP" name="client.UNN_UNP" required>
         </div>
 
         <label class="control-label col-sm-4">Вид деятельности:</label>
         <div class="col-sm-3">
-            @Html.EditorFor(model => model.client.Kind_Activity, new { @class = "form-control" })
+            <input type="text" class="form-control" id="client.Kind_Activity" value="@Model.client.Kind_Activity" name="client.Kind_Activity">
         </div>
     </div>
 
@@ -158,14 +175,14 @@
         <div class="col-sm-3" style="padding-top: 8px;">
             @Html.TextBox("tel" + i, cn.Telephone)
         </div>
-        
+
     </div>
             
     <div class="form-group">
-        <label class="control-label col-sm-3">Время обеда:</label>
-        <div class="col-sm-4" style="padding-top: 8px;">
+        <label class="control-label col-sm-3  col-sm-offset-1">Время обеда:</label>
+        <div class="col-sm-3" style="padding-top: 8px;">
 
-            @Html.TextBox("dinner" + i, cn.Dinner_Time, new { @class = "timePick"})
+            @Html.TextBox("dinner" + i, cn.Dinner_Time, new { @class = "timePick" })
 
         </div>
 
@@ -194,9 +211,7 @@
         <div class="col-sm-3">
             <input type="text" class="form-control" id="addTel1" name="addTel1" />
         </div>
-        @*<div class="col-sm-1">
-            <input type="button" class="form-control" id="addNumber" value="+" style="width: 26px;" onclick="addNewTellNumder(); return false;" />
-        </div>*@
+
     </div>
 
     <div class="form-group">
@@ -209,13 +224,11 @@
         <div class="col-sm-4">
             <input type="text" class="form-control" id="addPost1" name="addPost1" />
         </div>
-    </div>
-    
-    <input type="button" value="+" onclick="addNewFields(); return false;" />
-
+    </div> 
     
     
     <div class="form-group" id="buttonsDiv">
+        <input type="button" value="+" onclick="addNewFields(); return false;" />
         <br />
         <br />
         <div class="col-sm-3">
@@ -229,21 +242,6 @@
         }
     </div>
 }
-
-
-<script type="text/javascript" >
-    
-        $('#client_Registration_Date').datepicker({
-            format: 'dd.mm.yyyy'
-        });
-
-        $('[class*=timePick]').timepicker({
-            minuteStep : 10,
-            showMeridian: false,
-            defaultTime: false
-        });
-
-</script>
 
 
 

@@ -1,77 +1,86 @@
 ﻿@model CRM.Employees
 
+<script src="~/Scripts/validator.min.js"></script>
 
-@using (Html.BeginForm("EditEmployee", "Admin", FormMethod.Post, new { @class = "form-horizontal", role="form" , id="EditEmployeeForm"}))
-{
-        <div style="display:none;">
-            @Html.EditorFor(model => model.ID_Employee )
-        </div>
-    
-    
-        <div class="form-group">
-            <label class="control-label col-sm-2">Имя:</label>
-            <div class="col-sm-3">
-                @Html.EditorFor(model => model.FIO, new { htmlAttributes = new { @class = "form-control" } })
-            </div>
 
-            <label class="control-label col-sm-4">Должность:</label>
-            <div class="col-sm-3">
-                @Html.EditorFor(model => model.Post, new { htmlAttributes = new { @class = "form-control" } })
-            </div>
-        </div>
-    
-    <div class="form-group">
-            <label class="control-label col-sm-2">Адрес:</label>
-            <div class="col-sm-3">
-                @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
-            </div>
+<form data-toggle="validator" role="form" action="/Admin/EditEmployee" id="EditEmployeeForm" method="post" class="form-horizontal">
+    <div style="display: none;">
+        <input type="text" class="form-control" id="ID_Employee" value="@Model.ID_Employee" name="ID_Employee" >
+    </div>
 
-            <label class="control-label col-sm-4">Дата рождения:</label>
-            <div class="col-sm-3">
-                @Html.EditorFor(model => model.Date_Birth, new { htmlAttributes = new { @class = "form-control" } })
-            </div>
-        </div>
-    
-    
-    <div class="form-group">
-            <label class="control-label col-sm-2">Дата принятия:</label>
-            <div class="col-sm-3">
-                @Html.EditorFor(model => model.Date_Admission, new { htmlAttributes = new { @class = "form-control" } })
-            </div>
-
-            <label class="control-label col-sm-4">Дата входа:</label>
-            <div class="col-sm-3">
-                @Html.EditorFor(model => model.Date_Entry, new { htmlAttributes = new { @class = "form-control" } })
-            </div>
-        </div>
-    
-    
-    <div class="form-group">
-            <label class="control-label col-sm-2">Логин:</label>
-            <div class="col-sm-3">
-                @Html.EditorFor(model => model.Login, new { htmlAttributes = new { @class = "form-control" } })
-            </div>
-
-            <label class="control-label col-sm-4">Пароль:</label>
-            <div class="col-sm-3">
-                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
-            </div>
-        </div>
-    
-    
-    <div class="form-group" id="buttonsDiv">
-            <br /><br />
-                <div class="col-sm-3">
-                    <input type="submit" class="form-control" id="save" value="Сохранить" name="Save"/>
-                </div>
-        @if( ((CRM.Employees)Session["CurrentUser"]).Role == 1  && Model.ID_Employee != 1)
-        {
-                <div class="col-sm-3">
-                    <input type="submit" class="form-control" id="delete" value="Удалить" name="Delete" />
-                </div>
+    @{
+        string dateBirth = Model.Date_Birth == null ? "" : Model.Date_Birth.ToString().Substring(0, 10);
+        string dateAdmission = Model.Date_Admission == null ? "" : Model.Date_Admission.ToString().Substring(0, 10);
+        string dateEntry = Model.Date_Entry == null ? "" : Model.Date_Entry.ToString().Substring(0, 10);
         }
-         </div>
-}
+
+
+    <div class="form-group">
+        <label class="control-label col-sm-2">Имя:</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" id="FIO" value="@Model.FIO" name="FIO" >
+        </div>
+
+        <label class="control-label col-sm-4">Должность:</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" id="Post" value="@Model.Post" name="Post" >
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-2">Адрес:</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" id="Address" value="@Model.Address" name="Address" >
+        </div>
+
+        <label class="control-label col-sm-4">Дата рождения:</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" id="Date_Birth" name="Date_Birth" value="@dateBirth" required>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label class="control-label col-sm-2">Дата принятия:</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" id="Date_Admission" name="Date_Admission" value="@dateAdmission" required>
+        </div>
+
+        <label class="control-label col-sm-4">Дата входа:</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" id="Date_Entry" name="Date_Entry" value="@dateEntry" required>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label class="control-label col-sm-2">Логин:</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" id="Login" name="Login" value="@Model.Login" required>
+        </div>
+
+        <label class="control-label col-sm-4">Пароль:</label>
+        <div class="col-sm-3">
+            <input type="text" data-minlength="6" class="form-control" id="Password" name="Password" data-error="Minimum of 6 characters" value="@Model.Password"  required>
+            <span class="help-block with-errors"></span>
+        </div>
+    </div>
+
+
+    <div class="form-group" id="buttonsDiv">
+        <br />
+        <br />
+        <div class="col-sm-3">
+            <input type="submit" class="form-control" id="save" value="Сохранить" name="Save" />
+        </div>
+        @if (((CRM.Employees)Session["CurrentUser"]).Role == 1 && Model.ID_Employee != 1)
+        {
+            <div class="col-sm-3">
+                <input type="submit" class="form-control" id="delete" value="Удалить" name="Delete" />
+            </div>
+        }
+    </div>
+</form>
 
 <script type="text/javascript">
 
@@ -91,6 +100,6 @@
         });
 
     })
-    
+
 
 </script>

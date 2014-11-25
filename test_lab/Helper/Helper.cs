@@ -58,26 +58,6 @@ namespace CRM.Helper
             }
 
             return list;
-            
-            // var items = from client in db.Clients
-            //             join contact in db.Contact_Name on client.ID_Client equals contact.ID_Clients
-            //               into gj from subCont in gj.DefaultIfEmpty()  
-            //               //join EmClCo in db.Employee_Clients_Content on client.ID_Client equals EmClCo.ID_Addressee_Client
-            //               //join content in db.Content on EmClCo.ID_Content equals content.ID_Content
-            //               select new CRM.Models.ClientsInfo
-            //               {
-            //                   ID = client.ID_Client,
-            //                   ID_Employee = client.ID_Employee.Value,
-            //                   Title = client.Title,
-            //                   Address = client.Address,
-            //                   FIO = subCont == null ? "-" : subCont.FIO,
-            //                   Post = subCont == null ? "-" : subCont.Post,
-            //                   Telephone = subCont == null ? "-" : subCont.Telephone,
-            //                   Dinner_Time = subCont == null ? TimeSpan.Zero : subCont.Dinner_Time//,
-            //                   //LastCall = content.Create_Date == null ? DateTime.MinValue : (DateTime)content.Create_Date
-            //               };
-
-            //List<CRM.Models.ClientsInfo> list = items.ToList();
         }
 
         #endregion
@@ -91,7 +71,7 @@ namespace CRM.Helper
 
         public static Employees GetEmployeeByLogin(string login)
         {
-            return db.Employees.SingleOrDefault(x => x.Login == login);
+            return db.Employees.Single(x => x.Login == login);
         }
 
         public static List<Employees> GetAllEmployees()
@@ -120,15 +100,18 @@ namespace CRM.Helper
 
         public static void AddNewEmployee(Employees newEmployee)
         {
-            db.Employees.Add(newEmployee);
-            db.SaveChanges();
+            if (UsersHelper.GetUsersByLogin(newEmployee.Login).Count <= 0)
+            {
+                db.Employees.Add(newEmployee);
+                db.SaveChanges();
 
-            if (!UsersHelper.CheckLogin(newEmployee.Login))
-                UsersHelper.AddNewUser(new Users() { 
+                UsersHelper.AddNewUser(new Users()
+                {
                     Login = newEmployee.Login,
                     Pass = newEmployee.Password,
                     DB_Path = db.Database.Connection.ConnectionString
                 });
+            }
         }
 
         public static void AddFirstEmployee(Employees newEmployee)
@@ -363,6 +346,11 @@ namespace CRM.Helper
             db.SaveChanges();
         }
 
+        public static bool CheckClientNameExist(string name)
+        {
+            return db.Clients.Where(x => x.Title == name).ToList().Count > 0;
+        }
+
         #endregion
 
         #region Contact_Name
@@ -395,25 +383,28 @@ namespace CRM.Helper
 
         public static List<CRM.Models.ClientsInfo> GetAllClientsInfoByManagerID(int id)
         {
-            var items = from client in db.Clients
-                        join contact in db.Contact_Name on client.ID_Client equals contact.ID_Clients
-                        into gj
-                        from subCont in gj.DefaultIfEmpty()
-                        where client.ID_Employee == id
-                        select new CRM.Models.ClientsInfo
-                        {
-                            ID = client.ID_Client,
-                            ID_Employee = client.ID_Employee.Value,
-                            Title = client.Title,
-                            Address = client.Address,
-                            FIO = subCont == null ? "-" : subCont.FIO,
-                            Post = subCont == null ? "-" : subCont.Post,
-                            Telephone = subCont == null ? "-" : subCont.Telephone,
-                            Dinner_Time = subCont == null ? TimeSpan.Zero : subCont.Dinner_Time
-                        };
 
-            return items.ToList();
+            List<CRM.Models.ClientsInfo> list = new List<Models.ClientsInfo>();
 
+            foreach (Clients client in db.Clients.Where(x => x.ID_Employee == id).ToList())
+            {
+                Contact_Name cn = db.Contact_Name.FirstOrDefault(x => x.ID_Clients == client.ID_Client);
+
+                list.Add(new CRM.Models.ClientsInfo()
+                {
+                    ID = client.ID_Client,
+                    ID_Employee = client.ID_Employee.Value,
+                    Title = client.Title,
+                    Address = client.Address,
+                    FIO = cn == null ? "-" : cn.FIO,
+                    Post = cn == null ? "-" : cn.Post,
+                    Telephone = cn == null ? "-" : cn.Telephone,
+                    Dinner_Time = cn == null ? TimeSpan.Zero : cn.Dinner_Time
+                });
+
+            }
+
+            return list;
         }
 
         #endregion

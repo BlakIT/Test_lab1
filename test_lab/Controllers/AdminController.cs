@@ -145,13 +145,21 @@ namespace CRM.Controllers
         [HttpPost]
         public JsonResult GetReminder()
         {
-            return Json( Helper.Helper.GetReminders(((CRM.Employees)Session["CurrentUser"]).ID_Employee, DateTime.Now) );
+            if (Session["CurrentUser"] != null)
+                return Json( Helper.Helper.GetReminders(((CRM.Employees)Session["CurrentUser"]).ID_Employee, DateTime.Now) );
+
+            return Json(null);
         }
 
         [HttpPost]
         public ActionResult SaveNewClient(Clients newClient)
         {
-            Helper.Helper.AddNewClient(newClient);
+            if (!Helper.Helper.CheckClientNameExist(newClient.Title))
+            {
+                newClient.ID_Employee = ((CRM.Employees)Session["CurrentUser"]).ID_Employee;
+                Helper.Helper.AddNewClient(newClient);
+            }
+
             return RedirectToAction("Index");
         }
 
@@ -259,6 +267,11 @@ namespace CRM.Controllers
 
             if (form.AllKeys.Contains("Save"))
             {
+                if (empl.Login != employee.Login && Helper.UsersHelper.GetUsersByLogin(employee.Login).Count > 0)
+                    return RedirectToAction("Index");
+
+                Users user = Helper.UsersHelper.GetUserByLogin(empl.Login);
+
                 empl.Address = employee.Address;
                 empl.Date_Admission = employee.Date_Admission;
                 empl.Date_Birth = employee.Date_Birth;
@@ -267,7 +280,9 @@ namespace CRM.Controllers
                 empl.Login = employee.Login;
                 empl.Password = employee.Password;
                 empl.Post = employee.Post;
-                                
+
+                user.Login = employee.Login;
+                user.Pass = employee.Password;
             }
             else if (form.AllKeys.Contains("Delete"))
             {
@@ -275,8 +290,9 @@ namespace CRM.Controllers
             }
 
             Helper.Helper.SqveCH();
+            Helper.UsersHelper.SaveCH();
 
-            return RedirectToAction("Index"); //PartialView("~/Views/PartialViews/_EmployeesPartial.cshtml"); 
+            return RedirectToAction("Index"); 
         }
     }
 }

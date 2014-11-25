@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
@@ -13,35 +14,45 @@ namespace CRM.Helper
 
         #region Login
 
-        public static bool CheckLoginAndPass(string login, string pass)
+        public static List<Users> GetUsersByLogin(string login)
         {
             var item = from user in db.Users
                        where user.Login.Equals(login)
                        select user;
 
-            var userr = item.ToList().Where(x => x.Pass == pass);
-
-            return userr.ToList().Count > 0;
+            return item.ToList();
         }
 
-        public static bool CheckLogin(string login)
+        public static Users GetUserByLoginAndPass(string login, string pass)
         {
-            var item = from user in db.Users
-                       where user.Login.Equals(login)
+            List<Users> users = GetUsersByLogin(login);
+
+            if (users.Count <= 0)
+                return null;
+
+            var userr = from user in users
+                       where user.Pass.Equals(pass)
                        select user;
 
-            return item.ToList().Count > 0;
+            if(userr.ToList().Count <= 0)
+                return null;
+
+            return userr.ToList()[0];
         }
 
-        public static Users Login(string login, string pass)
+        public static Users Registration(Users user)
         {
-            var item = from user in db.Users
-                       where user.Login.Equals(login)
-                       select user;
+            if (GetUsersByLogin(user.Login).Count > 0)
+                return null;
 
-            var userr = item.ToList().Single(x => x.Pass == pass);
+            RegisterNewUser(user);
 
-            return userr;
+            return GetUserByLogin(user.Login);
+        }
+
+        public static void SaveCH()
+        {
+            db.SaveChanges();
         }
 
         #endregion
@@ -59,15 +70,18 @@ namespace CRM.Helper
             db.SaveChanges();
         }
 
-        #endregion
-
-        #region Register
-
         public static void AddNewUser(Users user)
         {
             db.Users.Add(user);
             db.SaveChanges();
         }
+
+
+        #endregion
+
+        #region Register
+
+        
 
         public static void RegisterNewUser(Users user) 
         {
@@ -78,7 +92,9 @@ namespace CRM.Helper
                 int r = db.Database.ExecuteSqlCommand("USE master; CREATE DATABASE DB" + user.Login + " ON (NAME = DB" + user.Login + ", FILENAME = '" + DBpath + "')");
                 r = db.Database.ExecuteSqlCommand("USE [DB" + user.Login + "];" + GetTableScript());
 
-                DBpath = @"data source=SEVERUS-ПК\SQLEXPRESS;initial catalog=DB" + user.Login + @";integrated security=True;MultipleActiveResultSets=True;App=EntityFramework";
+                string connectFromWC = ConfigurationManager.ConnectionStrings["ServerName"].ToString();
+
+                DBpath = @"data source=" + connectFromWC +";initial catalog=DB" + user.Login + @";integrated security=True;MultipleActiveResultSets=True;App=EntityFramework";
 
                 user.DB_Path = DBpath;
 
@@ -100,6 +116,7 @@ namespace CRM.Helper
         
         #endregion
 
+        #region Addski Script
 
         public static string GetTableScript()
         {
@@ -378,6 +395,8 @@ namespace CRM.Helper
                                     GO
                                     ";
         }
+
+        #endregion
 
     }
 }
