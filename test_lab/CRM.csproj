@@ -256,6 +256,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-timepicker.css" />
+    <Content Include="Content\calendario\calendar.css" />
+    <Content Include="Content\calendario\custom_1.css" />
+    <Content Include="Content\calendario\custom_2.css" />
+    <Content Include="Content\calendario\demo.css" />
     <Content Include="Content\datepicker.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -333,11 +337,13 @@
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\bootstrap-datepicker.js" />
     <Content Include="Scripts\bootstrap-timepicker.js" />
+    <Content Include="Scripts\data.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\jquery.calendario.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
@@ -347,6 +353,7 @@
     <Content Include="Scripts\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\modernizr.custom.63321.js" />
     <Content Include="Scripts\validator.js" />
     <Content Include="Scripts\validator.min.js" />
     <Content Include="Web.config">
@@ -414,6 +421,7 @@
       <LastGenOutput>Users1.cs</LastGenOutput>
     </Content>
     <Content Include="Views\PartialViews\_ChoseEmployeePopUpPartial.cshtml" />
+    <Content Include="Views\PartialViews\_CalendarPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

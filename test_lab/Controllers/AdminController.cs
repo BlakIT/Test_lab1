@@ -85,6 +85,11 @@ namespace CRM.Controllers
                 case 5:     
                     ViewBag.Adressee = Helper.Helper.GetAllEmployeesName();
                     return PartialView("~/Views/PartialViews/_NewMailPartial.cshtml");
+
+                //view Calendar
+                case 6:
+                    //ViewBag.Adressee = Helper.Helper.GetAllEmployeesName();
+                    return PartialView("~/Views/PartialViews/_CalendarPartial.cshtml");
                     
                 default:
                     return PartialView("_OrganizationPartial", Helper.Helper.GetAllClientsInfo());
