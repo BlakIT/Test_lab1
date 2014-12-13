@@ -981,3 +981,11 @@ tr.pager td {
     background-image:url("../Images/glyphicons-halflings.png");
     background-position: -288px -120px;
 }*/
+/*--------------------------------------- Pop Up Client partial ----------------------------*/
+
+.disabled_button {
+    background-color:gray !important;
+    color:#c7d1d6;
+}
+
+/*---------------------------------------  ----------------------------*/

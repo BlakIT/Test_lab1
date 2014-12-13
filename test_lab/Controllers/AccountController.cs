@@ -14,7 +14,6 @@ namespace CRM.Controllers
 {
     public class AccountController : Controller
     {
-
         public ActionResult Index()
         {
             if (Session["CurrentUser"] != null)
@@ -22,7 +21,6 @@ namespace CRM.Controllers
 
             return RedirectToAction("Index", "Home"); 
         }          
-
         
         public ActionResult Login(FormCollection form)
         {
@@ -56,29 +54,12 @@ namespace CRM.Controllers
 
             return RedirectToAction("Index", "Admin");
         }
-
         
         public ActionResult LogOut()
         {
             Session["CurrentUser"] = null;
             return RedirectToAction("Index");
         }
-        
 
-        #region Вспомогательные методы
-
-        private ActionResult RedirectToLocal(string returnUrl)
-        {
-            if (Url.IsLocalUrl(returnUrl))
-            {
-                return Redirect(returnUrl);
-            }
-            else
-            {
-                return RedirectToAction("Index", "Home");
-            }
-        }        
-
-        #endregion
     }
 }

@@ -2,6 +2,36 @@
 
 <script src="~/Scripts/validator.min.js"></script>
 
+<script type="text/javascript">
+    $(document).ready(function () {
+        
+
+        $("#Login").change(function () {
+            
+            $.ajax(
+                {
+                    url: "/Admin/CheckEmployeeLogin",
+                    data: { name: $("#Login").val() },
+                    type: 'POST',
+                    success: function (data) {
+                        if (data) {
+                            $('#Login').next().hide().text("Логин занят").css("color", "red").fadeIn(400);
+                            $('#saveEmployeeButton').prop('disabled', true);
+                            $('#saveEmployeeButton').addClass('disabled_button').fadeIn(400);
+                        }
+                        else {
+                            $('#Login').next().hide().text("Логин свабоден").css("color", "green").fadeIn(400);
+                            $('#saveEmployeeButton').prop('disabled', false);
+                            $('#saveEmployeeButton').removeClass('disabled_button').fadeIn(400);   
+                        }
+                        AddRemoveDisOnBut();
+                    }
+                });
+        });
+
+    });
+</script>
+
 <div class="popup-box" id="popup-box-2">
     <div class="close">X</div>
     <div class="top">
@@ -43,7 +73,7 @@
         <div class="form-group">
             <label class="control-label col-sm-4">Логин:</label>
             <div class="col-sm-5">
-                <input type="text" class="form-control" id="Login" name="Login" required>
+                <input type="text" class="form-control" id="Login" name="Login" required><span></span>
             </div>
         </div>
         <div class="form-group">

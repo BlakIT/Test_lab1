@@ -10,16 +10,6 @@ namespace CRM.Controllers
     {
         public ActionResult Index()
         {
-            //if (Session["CurrentUser"] != null)
-            //{
-            //    Employees curUser = (Employees)Session["CurrentUser"];
-
-            //    if (curUser.Role == 1)
-            //        return RedirectToAction("Index", "Admin");
-            //    else if (curUser.Role == 2)
-            //        return RedirectToAction("Index", "Manager");
-            //}
-
             return View();
         }
 

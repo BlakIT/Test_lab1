@@ -9,10 +9,9 @@ namespace CRM.Controllers
 {
     public class AdminController : Controller
     {
-        //
-        // GET: /Admin/
-
         private List<CRM.Employees> allEmployeesList = Helper.Helper.GetAllEmployees();
+
+        #region Index
 
         public ActionResult Index()
         {
@@ -37,6 +36,10 @@ namespace CRM.Controllers
 
             return new List<ClientsInfo>();
         }
+
+        #endregion
+
+        #region Partials
 
         public ActionResult LoadClientsInfoPartial(int id)
         {
@@ -64,8 +67,7 @@ namespace CRM.Controllers
             {
                 //list all Organizations case
                 case 1:
-                    return PartialView("~/Views/PartialViews/_OrganizationPartial.cshtml", GetCorrectAllClientsCollection());
-                   
+                    return PartialView("~/Views/PartialViews/_OrganizationPartial.cshtml", GetCorrectAllClientsCollection());                   
 
                 //list all Employees case
                 case 2:     
@@ -95,6 +97,10 @@ namespace CRM.Controllers
                     return PartialView("_OrganizationPartial", Helper.Helper.GetAllClientsInfo());
             }
         }
+
+        #endregion
+
+        #region Mails
 
         /// <summary>
         /// return Mail info
@@ -133,11 +139,19 @@ namespace CRM.Controllers
             return View("Index");
         }
 
+        #endregion
+
+        #region Dialogs
+
         [HttpPost]
         public void SaveDialog( string text, int index)
         {
             Helper.Helper.SaveDialog(text, GetCorrectAllClientsCollection()[index].ID, ((CRM.Employees)Session["CurrentUser"]).ID_Employee);
         }
+
+        #endregion
+
+        #region Reminders
 
         [HttpPost]
         public void SaveReminder(string text, string date, string time)
@@ -156,6 +170,22 @@ namespace CRM.Controllers
             return Json(null);
         }
 
+        #endregion
+
+        #region Clients
+
+        [HttpPost]
+        public JsonResult CheckClientName(string name)
+        {
+            return Json(Helper.Helper.CheckClientNameExist(name));
+        }
+
+        [HttpPost]
+        public JsonResult CheckClientUNN(string unn)
+        {
+            return Json(Helper.Helper.CheckClientUNNExist(unn));
+        }
+
         [HttpPost]
         public ActionResult SaveNewClient(Clients newClient)
         {
@@ -165,13 +195,6 @@ namespace CRM.Controllers
                 Helper.Helper.AddNewClient(newClient);
             }
 
-            return RedirectToAction("Index");
-        }
-
-        [HttpPost]
-        public ActionResult SaveNewEmployee(Employees newEmpl)
-        {
-            Helper.Helper.AddNewEmployee(newEmpl);
             return RedirectToAction("Index");
         }
 
@@ -187,7 +210,7 @@ namespace CRM.Controllers
         /// </summary>
         /// <param name="form"></param>
         /// <returns></returns>
-        [HttpPost]      
+        [HttpPost]
         public ActionResult EditClient(FormCollection form)
         {
             int id = Int32.Parse(form["client.ID_Client"].ToString());
@@ -214,7 +237,7 @@ namespace CRM.Controllers
 
                 for (int i = 1; i <= countCnID; i++)
                 {
-                    cn = Helper.Helper.GetContactNameByID( Int32.Parse(form["cnid" + i.ToString()]));
+                    cn = Helper.Helper.GetContactNameByID(Int32.Parse(form["cnid" + i.ToString()]));
 
                     if ((form["name" + i.ToString()] == "" && form["tel" + i.ToString()] == "" && form["dinner" + i.ToString()] == "" && form["post" + i.ToString()] == "")
                         || (form["name" + i.ToString()] == null && form["tel" + i.ToString()] == null && form["dinner" + i.ToString()] == null && form["post" + i.ToString()] == null)
@@ -244,7 +267,8 @@ namespace CRM.Controllers
                     TimeSpan ts = new TimeSpan();
                     TimeSpan.TryParse(str, out ts);
 
-                    Helper.Helper.AddNewContactName(new Contact_Name() {
+                    Helper.Helper.AddNewContactName(new Contact_Name()
+                    {
                         FIO = form["addName" + i.ToString()],
                         Telephone = form["addTel" + i.ToString()],
                         Dinner_Time = ts,
@@ -261,9 +285,25 @@ namespace CRM.Controllers
                 Helper.Helper.DeleteClient(id);
             }
 
-            return RedirectToAction("Index"); 
+            return RedirectToAction("Index");
         }
 
+        #endregion
+
+        #region Employee
+
+        [HttpPost]
+        public JsonResult CheckEmployeeLogin(string login)
+        {
+            return Json(Helper.UsersHelper.GetUsersByLogin(login).Count > 0);
+        }
+
+        [HttpPost]
+        public ActionResult SaveNewEmployee(Employees newEmpl)
+        {
+            Helper.Helper.AddNewEmployee(newEmpl);
+            return RedirectToAction("Index");
+        }
 
         [HttpPost]
         public ActionResult EditEmployee(Employees employee, FormCollection form)
@@ -297,7 +337,10 @@ namespace CRM.Controllers
             Helper.Helper.SqveCH();
             Helper.UsersHelper.SaveCH();
 
-            return RedirectToAction("Index"); 
+            return RedirectToAction("Index");
         }
+
+        #endregion  
+        
     }
 }

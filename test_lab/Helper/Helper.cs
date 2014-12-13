@@ -351,6 +351,11 @@ namespace CRM.Helper
             return db.Clients.Where(x => x.Title == name).ToList().Count > 0;
         }
 
+        public static bool CheckClientUNNExist(string unn)
+        {
+            return db.Clients.Where(x => x.UNN_UNP == unn).ToList().Count > 0;
+        }
+
         #endregion
 
         #region Contact_Name
