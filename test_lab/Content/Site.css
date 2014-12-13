@@ -28,7 +28,7 @@ a {
     }
 
     a:hover {
-        background-color: #c7d1d6;
+        background-color: lightgray;
     }
 
 header, footer, hgroup,
@@ -981,3 +981,7 @@ tr.pager td {
     background-image:url("../Images/glyphicons-halflings.png");
     background-position: -288px -120px;
 }*/
+
+.navbar-nav>li>.dropdown-menu :hover{
+background-color:lightgray !important;
+}

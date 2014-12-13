@@ -1,7 +1,7 @@
 ﻿@model List<CRM.Models.ClientsInfo>
 
 
-<div class="container-fluid">
+<div class="container-fluid" style="width:1030px">
     <div class="row" style="font-size: 14px;">
         <div class="col-xs-2">
             <b>Название</b>
@@ -11,7 +11,7 @@
             <b>Адресс</b>
         </div>
 
-        <div class="col-xs-1">
+        <div class="col-xs-2">
             <b>Ф.И.О.</b>
         </div>
 
@@ -25,7 +25,7 @@
 
         @if (((CRM.Employees)Session["CurrentUser"]).Role == 1)
         {
-            <div class="col-xs-1">
+            <div class="col-xs-2">
                 <b>Время обеда</b>
             </div>
         
@@ -62,7 +62,7 @@
                 @temp.Address
             </div>
 
-            <div class="col-xs-1">
+            <div class="col-xs-2">
                 @temp.FIO
             </div>
 
@@ -81,7 +81,7 @@
                     @temp.Dinner_Time
                 </div>   
                 
-                <div class="col-xs-1" >
+                <div class="col-xs-2" >
                     @CRM.Helper.Helper.GetEmployeeByID(temp.ID_Employee).FIO
                 </div>    
                 
